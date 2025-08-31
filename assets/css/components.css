@@ -1,0 +1,17 @@
+/* components.css: cards, project list, blog list */
+.projects-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.project-card{display:flex;flex-direction:column}
+.project-cover{aspect-ratio:16/9;background:#0a0f1e;border-bottom:1px solid var(--border)}
+.project-card:hover{transform:translateY(-2px);transition:transform .2s}
+.project-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.searchbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.searchbar input{padding:10px 12px;border-radius:10px;border:1px solid var(--border);background:transparent;color:var(--text);min-width:220px}
+.tag{border:1px solid var(--border);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted);cursor:pointer}
+.tag.active{background:var(--card)}
+.post-list{display:grid;gap:16px}
+.post-card{display:grid;grid-template-columns:140px 1fr;gap:14px;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--card)}
+.post-card .cover{height:100%;object-fit:cover}
+@media (max-width:700px){.post-card{grid-template-columns:1fr}}
+.code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;background:rgba(2,6,23,.4);padding:14px;border-radius:12px;overflow:auto;border:1px solid var(--border)}
+blockquote{border-left:3px solid var(--primary);margin:0;padding:8px 12px;color:var(--muted);background:rgba(14,165,233,.06);border-radius:8px}
+.backtop{position:fixed;right:16px;bottom:16px;opacity:.9}

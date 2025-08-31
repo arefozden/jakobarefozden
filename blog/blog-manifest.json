@@ -1,0 +1,56 @@
+{
+  "posts": [
+    {
+      "slug": "react-performance-ipuclari",
+      "title": "React Performans İpuçları",
+      "date": "2025-08-15",
+      "category": "tech",
+      "excerpt": "Render azaltma, memo, lazy yükleme ve kod bölme üzerine kısa notlar.",
+      "cover": "/assets/img/cover-placeholder.svg",
+      "path": "/blog/posts/tech/2025-08-15-react-performance-ipuclari.md",
+      "tags": [
+        "react",
+        "performance"
+      ]
+    },
+    {
+      "slug": "in5040-notlari",
+      "title": "IN5040 – Big Data Sistemlerinden Notlar",
+      "date": "2025-08-10",
+      "category": "tech",
+      "excerpt": "Veri bölümlendirme, indeksleme ve sorgu optimizasyonu.",
+      "cover": "/assets/img/cover-placeholder.svg",
+      "path": "/blog/posts/tech/2025-08-10-in5040-notlar.md",
+      "tags": [
+        "database",
+        "bigdata"
+      ]
+    },
+    {
+      "slug": "ogretmenlige-baslamak",
+      "title": "Öğretmenliğe Başlamak: İlk Hafta İzlenimleri",
+      "date": "2025-08-22",
+      "category": "personal",
+      "excerpt": "Mailand vgs’de ilk hafta, sınıf düzeni, Teams kanalları ve öğrencilerle tanışma.",
+      "cover": "/assets/img/cover-placeholder.svg",
+      "path": "/blog/posts/personal/2025-08-22-ogretmenlige-baslamak.md",
+      "tags": [
+        "öğretmenlik",
+        "günlük"
+      ]
+    },
+    {
+      "slug": "yaz-tatil-notlari",
+      "title": "Kısa Yaz Tatil Notları",
+      "date": "2025-08-20",
+      "category": "personal",
+      "excerpt": "Kopenhag gezisi, Nyhavn kalabalığı ve favori yürüyüş rotaları.",
+      "cover": "/assets/img/cover-placeholder.svg",
+      "path": "/blog/posts/personal/2025-08-20-yaz-tatil-notlari.md",
+      "tags": [
+        "seyahat",
+        "kişisel"
+      ]
+    }
+  ]
+}

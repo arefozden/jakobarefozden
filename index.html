@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <title>Jakob Aref Özden – Ana Sayfa</title>
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/theme.css">
+  <script defer src="/assets/js/injectPartials.js"></script>
+  <script defer src="/assets/js/theme.js"></script>
+
+  
+</head>
+<body>
+  <div id="site-header"></div>
+  
+<main class="container section">
+  <section class="hero">
+    <div>
+      <h1>Merhaba, ben <span style="color:var(--primary)">Jakob Aref Özden</span>.</h1>
+      <p style="color:var(--muted)">
+        Full‑stack geliştirici, öğretmen ve UiO yüksek lisans öğrencisi. 
+        Web uygulamaları, eğitim teknolojileri ve topluluk projeleri üzerinde çalışıyorum.
+      </p>
+      <div class="actions">
+        <a class="btn" href="/projects/">🚀 Projeler</a>
+        <a class="btn" href="/blog/">✍️ Blog</a>
+      </div>
+    </div>
+    <div class="pfp card"><img src="/assets/img/profile.svg" alt="Profil"></div>
+  </section>
+
+  <section class="section">
+    <h2>Öne Çıkan Projeler</h2>
+    <div id="featured-projects" class="projects-grid"></div>
+  </section>
+
+  <section class="section">
+    <h2>Son Yazılar</h2>
+    <div class="post-list" id="recent-posts"></div>
+  </section>
+</main>
+<script type="module">
+  import {{ $ }} from '/assets/js/utils.js';
+  // featured projects
+  const projRes = await fetch('/projects/projects.json'); const pdata = await projRes.json();
+  const featured = pdata.projects.filter(p=>p.featured).slice(0,6);
+  const fp = $('#featured-projects');
+  fp.innerHTML = featured.map(p=>`<article class="card project-card">
+    <div class="project-cover"><img src="${p.cover||'/assets/img/cover-placeholder.svg'}" alt="" loading="lazy"></div>
+    <div class="card-body">
+      <h3>${p.title}</h3>
+      <p style="color:var(--muted)}">${p.description||''}</p>
+      <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+        ${p.repo?`<a class="btn" href="${p.repo}" target="_blank">Repo</a>`:''}
+        ${p.demo?`<a class="btn" href="${p.demo}" target="_blank">Demo</a>`:''}
+      </div>
+    </div>
+  </article>`).join('');
+
+  // recent posts
+  const blogRes = await fetch('/blog/blog-manifest.json'); const bdata = await blogRes.json();
+  const posts = bdata.posts.sort((a,b)=> b.date.localeCompare(a.date)).slice(0,3);
+  const rp = document.getElementById('recent-posts');
+  rp.innerHTML = posts.map(p=>`
+    <article class="post-card">
+      <img class="cover" src="${p.cover||'/assets/img/cover-placeholder.svg'}" alt="" loading="lazy">
+      <div class="card-body">
+        <div class="badge">${p.category}</div>
+        <h3>${p.title}</h3>
+        <small style="color:var(--muted)">${new Date(p.date).toLocaleDateString()}</small>
+        <p style="color:var(--muted)">${p.excerpt||''}</p>
+        <a class="btn" href="/blog/posts/slug.html?slug=${p.slug}">Oku</a>
+      </div>
+    </article>`).join('');
+</script>
+
+  <div id="site-footer"></div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+{
+  "projects": [
+    {
+      "title": "Aktivitetsvisning & Banebestilling",
+      "description": "React + Laravel entegrasyonlu etkinlik görüntüleme ve saha rezervasyon modülü.",
+      "tags": [
+        "react",
+        "laravel",
+        "fullstack"
+      ],
+      "repo": "https://github.com/username/banebestilling",
+      "demo": "",
+      "cover": "/assets/img/cover-placeholder.svg",
+      "featured": true,
+      "updated": "2025-08-20"
+    },
+    {
+      "title": "Görsel Rutin Android Uygulaması",
+      "description": "Çocuklar için sabah/akşam rutin uygulaması. Redux, Tailwind, Firebase deneyleri.",
+      "tags": [
+        "android",
+        "redux",
+        "tailwind"
+      ],
+      "repo": "https://github.com/username/gorsel-rutin",
+      "demo": "",
+      "cover": "/assets/img/cover-placeholder.svg",
+      "featured": true,
+      "updated": "2025-07-15"
+    },
+    {
+      "title": "IMDB API Film Sitesi",
+      "description": "React ile film arama ve detay sayfası. IMDB API.",
+      "tags": [
+        "react",
+        "api"
+      ],
+      "repo": "https://github.com/username/imdb-react",
+      "demo": "",
+      "cover": "/assets/img/cover-placeholder.svg",
+      "featured": false,
+      "updated": "2025-06-30"
+    }
+  ]
+}

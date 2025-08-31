@@ -44,40 +44,47 @@
     <div class="post-list" id="recent-posts"></div>
   </section>
 </main>
-<script type="module">
-  import {{ $ }} from '/assets/js/utils.js';
+<script>
+(async () => {
   // featured projects
-  const projRes = await fetch('/projects/projects.json'); const pdata = await projRes.json();
-  const featured = pdata.projects.filter(p=>p.featured).slice(0,6);
-  const fp = $('#featured-projects');
-  fp.innerHTML = featured.map(p=>`<article class="card project-card">
-    <div class="project-cover"><img src="${p.cover||'/assets/img/cover-placeholder.svg'}" alt="" loading="lazy"></div>
-    <div class="card-body">
-      <h3>${p.title}</h3>
-      <p style="color:var(--muted)}">${p.description||''}</p>
-      <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
-        ${p.repo?`<a class="btn" href="${p.repo}" target="_blank">Repo</a>`:''}
-        ${p.demo?`<a class="btn" href="${p.demo}" target="_blank">Demo</a>`:''}
+  const projRes = await fetch('/projects/projects.json'); 
+  const pdata = await projRes.json();
+  const featured = pdata.projects.filter(p => p.featured).slice(0, 6);
+  const fp = document.getElementById('featured-projects');
+  fp.innerHTML = featured.map(p => `
+    <article class="card project-card">
+      <div class="project-cover"><img src="${p.cover}" alt=""></div>
+      <div class="card-body">
+        <h3>${p.title}</h3>
+        <p style="color:var(--muted)">${p.description}</p>
+        <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+          ${p.repo ? `<a class="btn" href="${p.repo}" target="_blank">Repo</a>` : ''}
+          ${p.demo ? `<a class="btn" href="${p.demo}" target="_blank">Demo</a>` : ''}
+        </div>
       </div>
-    </div>
-  </article>`).join('');
+    </article>
+  `).join('');
 
   // recent posts
-  const blogRes = await fetch('/blog/blog-manifest.json'); const bdata = await blogRes.json();
-  const posts = bdata.posts.sort((a,b)=> b.date.localeCompare(a.date)).slice(0,3);
+  const blogRes = await fetch('/blog/blog-manifest.json'); 
+  const bdata = await blogRes.json();
+  const posts = bdata.posts.sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3);
   const rp = document.getElementById('recent-posts');
-  rp.innerHTML = posts.map(p=>`
+  rp.innerHTML = posts.map(p => `
     <article class="post-card">
-      <img class="cover" src="${p.cover||'/assets/img/cover-placeholder.svg'}" alt="" loading="lazy">
+      <img class="cover" src="${p.cover}" alt="">
       <div class="card-body">
         <div class="badge">${p.category}</div>
         <h3>${p.title}</h3>
         <small style="color:var(--muted)">${new Date(p.date).toLocaleDateString()}</small>
-        <p style="color:var(--muted)">${p.excerpt||''}</p>
+        <p style="color:var(--muted)">${p.excerpt}</p>
         <a class="btn" href="/blog/posts/slug.html?slug=${p.slug}">Read</a>
       </div>
-    </article>`).join('');
+    </article>
+  `).join('');
+})();
 </script>
+
 
   <div id="site-footer"></div>
 </body>

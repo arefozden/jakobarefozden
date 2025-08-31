@@ -51,6 +51,62 @@
         "seyahat",
         "kişisel"
       ]
+    },
+    {
+      "slug": "norway-summer-2024",
+      "title": "Norway Road Trip — Summer 2024",
+      "date": "2024-07-20",
+      "category": "personal",
+      "excerpt": "Highlights from our summer tour across Norway — routes, tips and photos.",
+      "cover": "/assets/img/cover-placeholder.svg",
+      "path": "/blog/posts/personal/2024-07-20-norway-summer-2024.md",
+      "tags": [
+        "travel",
+        "norway",
+        "summer"
+      ]
+    },
+    {
+      "slug": "europe-2023-de",
+      "title": "Germany · Netherlands · Belgium — Summer 2023",
+      "date": "2023-08-10",
+      "category": "personal",
+      "excerpt": "Family trip notes: routes, stops and budget-friendly tips across DE/NL/BE.",
+      "cover": "/assets/img/cover-placeholder.svg",
+      "path": "/blog/posts/personal/2023-08-10-europe-2023-de-nl-be.md",
+      "tags": [
+        "travel",
+        "europe",
+        "family"
+      ]
+    },
+    {
+      "slug": "europe-2025-nordic-central",
+      "title": "Sweden · Germany · Czechia · Austria · Croatia · Bosnia · Italy · Switzerland · Denmark — Summer 2025",
+      "date": "2025-07-28",
+      "category": "personal",
+      "excerpt": "A long multi-country journey — itineraries, border tips, and favorite spots.",
+      "cover": "/assets/img/cover-placeholder.svg",
+      "path": "/blog/posts/personal/2025-07-28-europe-2025-multicountry.md",
+      "tags": [
+        "travel",
+        "europe",
+        "roadtrip"
+      ]
+    },
+    {
+      "slug": "ai-in-vgs-education",
+      "title": "Using AI in Upper Secondary (VGS) Teaching",
+      "date": "2025-08-31",
+      "category": "tech",
+      "excerpt": "Early notes on safe, effective and ethical AI usage in VGS: prompts, evaluation and policy alignment.",
+      "cover": "/assets/img/cover-placeholder.svg",
+      "path": "/blog/posts/tech/2025-08-31-ai-in-vgs-education.md",
+      "tags": [
+        "ai",
+        "education",
+        "policy"
+      ]
     }
   ]
 }

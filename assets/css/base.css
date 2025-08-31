@@ -30,3 +30,12 @@ h3{font-size:clamp(18px,3vw,24px)}
 .hidden{display:none !important}
 footer{margin-top:auto}
 .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px)}
+
+/* LIGHTBOX */
+.lightbox-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:1000}
+.lightbox-backdrop.active{display:flex}
+.lightbox-img{max-width:92vw;max-height:90vh;border-radius:12px;border:1px solid var(--border);box-shadow:var(--shadow)}
+.lightbox-close{position:fixed;top:18px;right:18px;background:transparent;border:1px solid var(--border);border-radius:999px;padding:10px 14px;color:#fff;cursor:pointer}
+
+/* Smooth theme transition */
+:root.theme-transition *{transition: background-color .3s ease, color .3s ease, border-color .3s ease; transition-property: background-color,color,border-color;}

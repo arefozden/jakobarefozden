@@ -1,45 +1,60 @@
 {
   "projects": [
     {
-      "title": "Aktivitetsvisning & Banebestilling",
-      "description": "React + Laravel entegrasyonlu etkinlik görüntüleme ve saha rezervasyon modülü.",
+      "title": "Forum2024",
+      "description": "C# forum application prototype (MVC/data).",
       "tags": [
-        "react",
-        "laravel",
-        "fullstack"
+        "csharp",
+        ".net",
+        "mvc"
       ],
-      "repo": "https://github.com/username/banebestilling",
+      "repo": "https://github.com/arefozden/Forum2024",
       "demo": "",
       "cover": "/assets/img/cover-placeholder.svg",
       "featured": true,
-      "updated": "2025-08-20"
+      "updated": "2024-06-01"
     },
     {
-      "title": "Görsel Rutin Android Uygulaması",
-      "description": "Çocuklar için sabah/akşam rutin uygulaması. Redux, Tailwind, Firebase deneyleri.",
+      "title": "uniLife",
+      "description": "Python utilities and scripts for campus life.",
       "tags": [
-        "android",
-        "redux",
-        "tailwind"
+        "python",
+        "cli"
       ],
-      "repo": "https://github.com/username/gorsel-rutin",
+      "repo": "https://github.com/arefozden/uniLife",
       "demo": "",
       "cover": "/assets/img/cover-placeholder.svg",
       "featured": true,
-      "updated": "2025-07-15"
+      "updated": "2024-05-10"
     },
     {
-      "title": "IMDB API Film Sitesi",
-      "description": "React ile film arama ve detay sayfası. IMDB API.",
+      "title": "StudentRegister",
+      "description": "TypeScript-based student registry (models, CRUD, UI).",
       "tags": [
-        "react",
-        "api"
+        "typescript",
+        "crud",
+        "web"
       ],
-      "repo": "https://github.com/username/imdb-react",
+      "repo": "https://github.com/arefozden/StudentRegister",
       "demo": "",
       "cover": "/assets/img/cover-placeholder.svg",
       "featured": false,
-      "updated": "2025-06-30"
+      "updated": "2024-04-20"
+    },
+    {
+      "title": "ITFuture",
+      "description": "From beginning to models, MVC, database OK (C#/.NET).",
+      "tags": [
+        "csharp",
+        ".net",
+        "mvc",
+        "database"
+      ],
+      "repo": "https://github.com/arefozden/ITFuture",
+      "demo": "",
+      "cover": "/assets/img/cover-placeholder.svg",
+      "featured": true,
+      "updated": "2024-03-30"
     }
   ]
 }

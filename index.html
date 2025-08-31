@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="tr" data-theme="dark">
+<html lang="en" data-theme="dark">
 <head>
-  <title>Jakob Aref Özden – Ana Sayfa</title>
+  <title>Jakob Aref Özden – Home</title>
   
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,13 +20,13 @@
 <main class="container section">
   <section class="hero">
     <div>
-      <h1>Merhaba, ben <span style="color:var(--primary)">Jakob Aref Özden</span>.</h1>
+      <h1>Hi, I'm <span style="color:var(--primary)">Jakob Aref Özden</span>.</h1>
       <p style="color:var(--muted)">
-        Full‑stack geliştirici, öğretmen ve UiO yüksek lisans öğrencisi. 
-        Web uygulamaları, eğitim teknolojileri ve topluluk projeleri üzerinde çalışıyorum.
+        Full‑stack developer, teacher and UiO master's student.
+        I work on web apps, ed‑tech and community projects.
       </p>
       <div class="actions">
-        <a class="btn" href="/projects/">🚀 Projeler</a>
+        <a class="btn" href="/projects/">🚀 Projects</a>
         <a class="btn" href="/blog/">✍️ Blog</a>
       </div>
     </div>
@@ -34,12 +34,12 @@
   </section>
 
   <section class="section">
-    <h2>Öne Çıkan Projeler</h2>
+    <h2>Öne Çıkan Projects</h2>
     <div id="featured-projects" class="projects-grid"></div>
   </section>
 
   <section class="section">
-    <h2>Son Yazılar</h2>
+    <h2>Latest Posts</h2>
     <div class="post-list" id="recent-posts"></div>
   </section>
 </main>
@@ -73,7 +73,7 @@
         <h3>${p.title}</h3>
         <small style="color:var(--muted)">${new Date(p.date).toLocaleDateString()}</small>
         <p style="color:var(--muted)">${p.excerpt||''}</p>
-        <a class="btn" href="/blog/posts/slug.html?slug=${p.slug}">Oku</a>
+        <a class="btn" href="/blog/posts/slug.html?slug=${p.slug}">Read</a>
       </div>
     </article>`).join('');
 </script>

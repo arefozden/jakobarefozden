@@ -2,10 +2,10 @@
   "posts": [
     {
       "slug": "react-performance-ipuclari",
-      "title": "React Performans İpuçları",
+      "title": "React Performance Tips",
       "date": "2025-08-15",
       "category": "tech",
-      "excerpt": "Render azaltma, memo, lazy yükleme ve kod bölme üzerine kısa notlar.",
+      "excerpt": "Notes on reducing renders, memoization, lazy loading and code splitting.",
       "cover": "/assets/img/cover-placeholder.svg",
       "path": "/blog/posts/tech/2025-08-15-react-performance-ipuclari.md",
       "tags": [
@@ -15,10 +15,10 @@
     },
     {
       "slug": "in5040-notlari",
-      "title": "IN5040 – Big Data Sistemlerinden Notlar",
+      "title": "IN5040 – Notes from Advanced Databases for Big Data",
       "date": "2025-08-10",
       "category": "tech",
-      "excerpt": "Veri bölümlendirme, indeksleme ve sorgu optimizasyonu.",
+      "excerpt": "Partitioning, indexing and query optimization highlights.",
       "cover": "/assets/img/cover-placeholder.svg",
       "path": "/blog/posts/tech/2025-08-10-in5040-notlar.md",
       "tags": [
@@ -28,10 +28,10 @@
     },
     {
       "slug": "ogretmenlige-baslamak",
-      "title": "Öğretmenliğe Başlamak: İlk Hafta İzlenimleri",
+      "title": "Starting Teaching: First Week Impressions",
       "date": "2025-08-22",
       "category": "personal",
-      "excerpt": "Mailand vgs’de ilk hafta, sınıf düzeni, Teams kanalları ve öğrencilerle tanışma.",
+      "excerpt": "First week at Mailand vgs: class setup, Teams channels and meeting students.",
       "cover": "/assets/img/cover-placeholder.svg",
       "path": "/blog/posts/personal/2025-08-22-ogretmenlige-baslamak.md",
       "tags": [
@@ -41,10 +41,10 @@
     },
     {
       "slug": "yaz-tatil-notlari",
-      "title": "Kısa Yaz Tatil Notları",
+      "title": "Short Summer Trip Notes",
       "date": "2025-08-20",
       "category": "personal",
-      "excerpt": "Kopenhag gezisi, Nyhavn kalabalığı ve favori yürüyüş rotaları.",
+      "excerpt": "Copenhagen walkabouts, Nyhavn crowds and favorite viewpoints.",
       "cover": "/assets/img/cover-placeholder.svg",
       "path": "/blog/posts/personal/2025-08-20-yaz-tatil-notlari.md",
       "tags": [

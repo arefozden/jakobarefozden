@@ -4,6 +4,54 @@
   const status = document.querySelector('#status');
   const results = document.querySelector('#results');
   const button = document.querySelector('#load-button');
+  const countrySelect = document.querySelector('#country');
+  const citySelect = document.querySelector('#city');
+  const cityNote = document.querySelector('#city-note');
+  const fallbackCities = {
+    Norway:['Oslo','Bergen','Trondheim','Stavanger','Tromsø','Lillestrøm','Lørenskog','Drammen','Kristiansand','Fredrikstad','Sandnes','Bodø','Ålesund','Tønsberg','Skien','Hamar','Molde','Alta','Narvik'],
+    Turkey:['İstanbul','Ankara','İzmir','Bursa','Antalya','Konya','Adana','Gaziantep','Kayseri','Trabzon','Samsun','Diyarbakır','Erzurum','Eskişehir'],
+    Sweden:['Stockholm','Gothenburg','Malmö','Uppsala','Västerås','Örebro','Linköping','Helsingborg'],
+    Denmark:['Copenhagen','Aarhus','Odense','Aalborg','Esbjerg','Randers'],
+    Germany:['Berlin','Hamburg','Munich','Cologne','Frankfurt','Stuttgart','Düsseldorf','Dortmund'],
+    'United Kingdom':['London','Birmingham','Manchester','Leeds','Glasgow','Edinburgh','Liverpool','Bristol'],
+    'United States':['New York','Los Angeles','Chicago','Houston','Phoenix','Philadelphia','San Francisco','Seattle','Boston']
+  };
+  let cityRequest = 0;
+  function setCities(items, preferred) {
+    const names = [...new Set(items.map(s => String(s).trim()).filter(Boolean))]
+      .sort((a,b) => a.localeCompare(b,undefined,{sensitivity:'base'}));
+    citySelect.replaceChildren(...names.map(name => new Option(name,name)));
+    citySelect.value = names.includes(preferred) ? preferred : (names.includes('Oslo') && countrySelect.value === 'Norway' ? 'Oslo' : names[0] || '');
+    citySelect.disabled = !names.length;
+  }
+  async function updateCities(preferred) {
+    const country = countrySelect.value;
+    const request = ++cityRequest;
+    setCities(fallbackCities[country] || [],preferred);
+    cityNote.textContent = 'Loading more cities…';
+    try {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(),6500);
+      let response;
+      try {
+        response = await fetch('https://countriesnow.space/api/v0.1/countries/cities',{
+          method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({country}),signal:controller.signal
+        });
+      } finally { clearTimeout(timeout); }
+      if(!response.ok) throw new Error('City service unavailable');
+      const payload = await response.json();
+      if(payload.error || !Array.isArray(payload.data)) throw new Error('Invalid city list');
+      if(request !== cityRequest) return;
+      const chosen = citySelect.value;
+      setCities([...(fallbackCities[country] || []),...payload.data],preferred || chosen);
+      cityNote.textContent = `${citySelect.options.length} cities available`;
+    } catch (_) {
+      if(request === cityRequest) cityNote.textContent = 'Showing popular cities (full list unavailable)';
+    }
+  }
+  countrySelect.addEventListener('change', () => {
+    updateCities(countrySelect.value === 'Norway' ? 'Oslo' : undefined);
+  });
   const prayers = [['Fajr','Fajr'],['Sunrise','Sunrise'],['Dhuhr','Dhuhr'],['Asr','Asr'],['Maghrib','Maghrib'],['Isha','Isha']];
   const daily = prayers.filter(([key]) => key !== 'Sunrise');
   let current = null;
@@ -42,7 +90,7 @@
   }
   async function load(event) {
     if(event) event.preventDefault();
-    const city=document.querySelector('#city').value.trim();
+    const city=citySelect.value.trim();
     const country=document.querySelector('#country').value;
     const method=document.querySelector('#method').value;
     if(!city)return;
@@ -78,6 +126,17 @@
     }catch(error){status.classList.add('error');status.textContent='Could not load prayer times. Check the city, internet connection or try again later.';results.hidden=true;current=null;clearInterval(timer);}
     finally{button.disabled=false;}
   }
-  try{const saved=JSON.parse(localStorage.getItem('prayer-preferences')||'null');if(saved){if(typeof saved.city==='string')document.querySelector('#city').value=saved.city;if([...document.querySelector('#country').options].some(o=>o.value===saved.country))document.querySelector('#country').value=saved.country;if([...document.querySelector('#method').options].some(o=>o.value===saved.method))document.querySelector('#method').value=saved.method;}}catch(_){}
-  form.addEventListener('submit',load);load();
+  let initialCity = 'Oslo';
+  try {
+    const saved=JSON.parse(localStorage.getItem('prayer-preferences')||'null');
+    if(saved){
+      if([...countrySelect.options].some(o=>o.value===saved.country)) countrySelect.value=saved.country;
+      if(typeof saved.city==='string') initialCity=saved.city;
+      if([...document.querySelector('#method').options].some(o=>o.value===saved.method))document.querySelector('#method').value=saved.method;
+    }
+  } catch (_) {}
+  setCities(fallbackCities[countrySelect.value] || [],initialCity);
+  updateCities(initialCity);
+  form.addEventListener('submit',load);
+  load();
 })();

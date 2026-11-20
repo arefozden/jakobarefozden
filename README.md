@@ -12,7 +12,7 @@ Use VS Code Live Server or `python -m http.server 8000` and open http://localhos
 Publish from `main` / `(root)` in Settings → Pages. All new site links use relative paths and support a repository project path. The legacy files under assets and blog remain for future use.
 
 ## Next steps
-Build separate HTML/CSS/JavaScript API applications for prayer times, weather and exchange rates. They are listed as **Coming soon** and are not yet functional. Verify API CORS and avoid exposing secret keys in client-side JavaScript.
+Prayer Times is available at `projects/prayer-times/` and fetches daily timings from AlAdhan. Weather and exchange-rate applications are still planned. Verify API CORS and avoid exposing secret keys in client-side JavaScript.
 
 ## Before publishing
 Review profile text, email and social links. Replace the original placeholder CV with a real PDF before linking it. Review old blog posts for accuracy.

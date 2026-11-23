@@ -1,10 +1,101 @@
-(()=>{
-const $=id=>document.getElementById(id),amount=$('fx-amount'),from=$('fx-from'),to=$('fx-to'),status=$('fx-status'),result=$('fx-result');
-from.value='NOK';to.value='TRY';let requestId=0;
-const format=(n,c)=>new Intl.NumberFormat('en-US',{style:'currency',currency:c,maximumFractionDigits:2}).format(n);
-async function convert(){const n=Number(amount.value);if(!Number.isFinite(n)||n<0||amount.value===''){status.textContent='Enter a valid non-negative amount.';status.classList.add('error');result.hidden=true;return}const id=++requestId;status.classList.remove('error');status.textContent='Fetching the latest exchange rate…';$('fx-convert').disabled=true;
-try{let rate=1,date='';if(from.value!==to.value){const url='https://api.frankfurter.app/latest?from='+encodeURIComponent(from.value)+'&to='+encodeURIComponent(to.value);const r=await fetch(url);if(!r.ok)throw Error('Exchange rate service returned '+r.status);const data=await r.json();rate=data.rates?.[to.value];date=data.date;if(!Number.isFinite(rate))throw Error('Exchange rate is unavailable.')}else{date=new Date().toISOString().slice(0,10)}if(id!==requestId)return;
-$('fx-output').textContent=format(n*rate,to.value);$('fx-rate').textContent='1 '+from.value+' = '+new Intl.NumberFormat('en-US',{maximumFractionDigits:6}).format(rate)+' '+to.value;$('fx-date').textContent=from.value===to.value?'Same currency — no conversion needed.':'Reference rate date: '+date;result.hidden=false;status.textContent='Conversion ready.';
-}catch(e){if(id!==requestId)return;status.textContent=e.message||'Could not retrieve rates. Try again.';status.classList.add('error');result.hidden=true}finally{if(id===requestId)$('fx-convert').disabled=false}}
-$('fx-convert').addEventListener('click',convert);$('fx-swap').addEventListener('click',()=>{[from.value,to.value]=[to.value,from.value];convert()});document.querySelectorAll('[data-pair]').forEach(b=>b.addEventListener('click',()=>{[from.value,to.value]=b.dataset.pair.split(',');convert()}));amount.addEventListener('keydown',e=>{if(e.key==='Enter')convert()});from.addEventListener('change',convert);to.addEventListener('change',convert);convert();
+(() => {
+  const $ = id => document.getElementById(id);
+  const amount = $('fx-amount'), from = $('fx-from'), to = $('fx-to');
+  const status = $('fx-status'), result = $('fx-result');
+  from.value = 'NOK';
+  to.value = 'TRY';
+  let requestId = 0;
+
+  const format = (value, currency) => new Intl.NumberFormat('en-US', {
+    style: 'currency', currency, maximumFractionDigits: 2
+  }).format(value);
+
+  async function getJson(url) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 9000);
+    try {
+      const response = await fetch(url, { signal: controller.signal, cache: 'no-store' });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return await response.json();
+    } finally { clearTimeout(timer); }
+  }
+
+  async function getRate(base, quote) {
+    // Primary provider: current Frankfurter API endpoint (not the retired .app endpoint).
+    try {
+      const data = await getJson(`https://api.frankfurter.dev/v1/latest?base=${encodeURIComponent(base)}&symbols=${encodeURIComponent(quote)}`);
+      const rate = Number(data.rates?.[quote]);
+      if (!Number.isFinite(rate) || rate <= 0) throw new Error('Invalid rate');
+      return { rate, date: data.date, source: 'Frankfurter' };
+    } catch (_) {
+      // Independent provider; supports additional currencies and mirrors.
+      const baseCode = base.toLowerCase();
+      const quoteCode = quote.toLowerCase();
+      const urls = [
+        `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${baseCode}.min.json`,
+        `https://latest.currency-api.pages.dev/v1/currencies/${baseCode}.min.json`
+      ];
+      for (const url of urls) {
+        try {
+          const data = await getJson(url);
+          const rate = Number(data[baseCode]?.[quoteCode]);
+          if (Number.isFinite(rate) && rate > 0) {
+            return { rate, date: data.date, source: 'Currency API' };
+          }
+        } catch (_) { /* Try next mirror. */ }
+      }
+      throw new Error('Exchange rates could not be loaded. Check your connection and try again.');
+    }
+  }
+
+  async function convert() {
+    const raw = amount.value.trim();
+    const n = Number(raw);
+    const id = ++requestId;
+    if (!raw || !Number.isFinite(n) || n < 0) {
+      status.textContent = 'Enter a valid non-negative amount.';
+      status.classList.add('error');
+      result.hidden = true;
+      return;
+    }
+    status.classList.remove('error');
+    status.textContent = 'Fetching the latest exchange rate…';
+    $('fx-convert').disabled = true;
+    result.hidden = true;
+    try {
+      const data = from.value === to.value
+        ? { rate: 1, date: '', source: 'No API needed' }
+        : await getRate(from.value, to.value);
+      if (id !== requestId) return;
+      $('fx-output').textContent = format(n * data.rate, to.value);
+      $('fx-rate').textContent = `1 ${from.value} = ${new Intl.NumberFormat('en-US', { maximumFractionDigits: 6 }).format(data.rate)} ${to.value}`;
+      $('fx-date').textContent = from.value === to.value
+        ? 'Same currency — no conversion needed.'
+        : `Reference rate date: ${data.date || 'Latest available'}`;
+      $('fx-source').textContent = `Current source: ${data.source}.`;
+      result.hidden = false;
+      status.textContent = 'Conversion ready.';
+    } catch (error) {
+      if (id !== requestId) return;
+      status.textContent = error.message || 'Could not retrieve rates.';
+      status.classList.add('error');
+      result.hidden = true;
+    } finally {
+      if (id === requestId) $('fx-convert').disabled = false;
+    }
+  }
+
+  $('fx-convert').addEventListener('click', convert);
+  $('fx-swap').addEventListener('click', () => {
+    [from.value, to.value] = [to.value, from.value];
+    convert();
+  });
+  document.querySelectorAll('[data-pair]').forEach(button => button.addEventListener('click', () => {
+    [from.value, to.value] = button.dataset.pair.split(',');
+    convert();
+  }));
+  amount.addEventListener('keydown', event => { if (event.key === 'Enter') convert(); });
+  from.addEventListener('change', convert);
+  to.addEventListener('change', convert);
+  convert();
 })();

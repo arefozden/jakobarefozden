@@ -1,0 +1,24 @@
+(()=>{
+const $=id=>document.getElementById(id), form=$('weather-form'),status=$('weather-status'),out=$('weather-output');
+const desc={0:['Clear sky','☀️'],1:['Mainly clear','🌤️'],2:['Partly cloudy','⛅'],3:['Overcast','☁️'],45:['Fog','🌫️'],48:['Rime fog','🌫️'],51:['Light drizzle','🌦️'],53:['Drizzle','🌦️'],55:['Heavy drizzle','🌧️'],56:['Freezing drizzle','🌧️'],57:['Freezing drizzle','🌧️'],61:['Light rain','🌦️'],63:['Rain','🌧️'],65:['Heavy rain','🌧️'],66:['Freezing rain','🌧️'],67:['Freezing rain','🌧️'],71:['Light snow','🌨️'],73:['Snow','❄️'],75:['Heavy snow','❄️'],77:['Snow grains','🌨️'],80:['Rain showers','🌦️'],81:['Rain showers','🌧️'],82:['Heavy showers','⛈️'],85:['Snow showers','🌨️'],86:['Heavy snow showers','❄️'],95:['Thunderstorm','⛈️'],96:['Thunderstorm with hail','⛈️'],99:['Thunderstorm with hail','⛈️']};
+const condition=code=>desc[code]||['Weather conditions','🌡️'];
+const degrees=n=>Number.isFinite(n)?Math.round(n)+'°C':'—';
+const day=s=>new Intl.DateTimeFormat('en',{weekday:'short',timeZone:'UTC'}).format(new Date(s+'T12:00:00Z'));
+const fmtTime=s=>s?.slice(11,16)||'—';
+async function json(url){const r=await fetch(url);if(!r.ok)throw Error('Weather service returned '+r.status);return r.json()}
+async function load(){const city=$('city-query').value.trim(),country=$('country-filter').value;if(!city)return;status.classList.remove('error');status.textContent='Loading weather…';$('weather-submit').disabled=true;out.hidden=true;try{
+const query=new URLSearchParams({name:city,count:'20',language:'en',format:'json'});if(country)query.set('countryCode',country);
+const geo=await json('https://geocoding-api.open-meteo.com/v1/search?'+query);if(!geo.results?.length)throw Error('City not found. Try another name or choose All countries.');
+const place=geo.results[0];const params=new URLSearchParams({latitude:String(place.latitude),longitude:String(place.longitude),current:'temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m',hourly:'temperature_2m,precipitation_probability,weather_code',daily:'weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max',timezone:place.timezone||'auto',forecast_days:'7'});
+const data=await json('https://api.open-meteo.com/v1/forecast?'+params),c=data.current;
+$('weather-icon').textContent=condition(c.weather_code)[1];$('weather-temp').textContent=degrees(c.temperature_2m);$('weather-desc').textContent=condition(c.weather_code)[0];$('weather-location').textContent=place.name+', '+place.country;
+$('weather-localtime').textContent='Local time: '+data.current.time.replace('T',' ')+' · '+data.timezone_abbreviation;
+$('weather-feels').textContent=degrees(c.apparent_temperature);$('weather-wind').textContent=Math.round(c.wind_speed_10m)+' km/h';$('weather-humidity').textContent=c.relative_humidity_2m+'%';
+const hourly=data.hourly,now=c.time.slice(0,13),idx=Math.max(0,hourly.time.findIndex(t=>t.slice(0,13)>=now));
+$('weather-hours').replaceChildren(...hourly.time.slice(idx,idx+12).map((t,i)=>{let n=idx+i,e=document.createElement('div');e.className='api-hour';e.innerHTML='<small></small><div class="emoji"></div><strong></strong><small class="rain"></small>';e.querySelector('small').textContent=fmtTime(t);e.querySelector('.emoji').textContent=condition(hourly.weather_code[n])[1];e.querySelector('strong').textContent=degrees(hourly.temperature_2m[n]);e.querySelector('.rain').textContent=(hourly.precipitation_probability[n]??0)+'% rain';return e}));
+$('weather-days').replaceChildren(...data.daily.time.map((t,i)=>{let e=document.createElement('div');e.className='api-day';e.innerHTML='<strong></strong><div class="emoji"></div><div class="temps"></div><small></small>';e.querySelector('strong').textContent=day(t);e.querySelector('.emoji').textContent=condition(data.daily.weather_code[i])[1];e.querySelector('.temps').textContent=degrees(data.daily.temperature_2m_max[i])+' / '+degrees(data.daily.temperature_2m_min[i]);e.querySelector('small').textContent=(data.daily.precipitation_probability_max[i]??0)+'% rain';return e}));
+out.hidden=false;status.textContent='Updated for '+place.name+'.';localStorage.setItem('weather-city',city);localStorage.setItem('weather-country',country);
+}catch(e){status.textContent=e.message||'Could not load weather. Please try again.';status.classList.add('error')}finally{$('weather-submit').disabled=false}}
+form.addEventListener('submit',e=>{e.preventDefault();load()});
+const city=localStorage.getItem('weather-city'),country=localStorage.getItem('weather-country');if(city)$('city-query').value=city;if(country!==null)$('country-filter').value=country;load();
+})();

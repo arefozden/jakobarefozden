@@ -1,0 +1,26 @@
+        body {
+            font-family: Arial;
+            margin: 30px
+        }
+
+        .kort-container {
+            display: flex;
+            gap: 16px
+        }
+
+        .kort {
+            flex: 1;
+            padding: 24px;
+            background: #e5f0ff;
+            border-radius: 12px
+        }
+
+        @media(max-width:600px) {
+            .kort-container {
+                flex-direction: column
+            }
+
+            body {
+                margin: 14px
+            }
+        }

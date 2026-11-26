@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Enkel quiz | IM Portal</title>
+
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+
+<body>
+
+    <div id="site-header"></div>
+
+    <main id="top">
+
+        <div class="breadcrumb">
+
+            <a href="../../../index.html">
+                IM Portal
+            </a>
+
+            <span>›</span>
+
+            <a href="../../index.html">
+                Prosjekter
+            </a>
+
+            <span>›</span>
+
+            <span>
+                Enkel quiz
+            </span>
+
+        </div>
+
+
+        <section class="page-intro">
+
+            <p class="eyebrow">
+                JavaScript · Nybegynner
+            </p>
+
+            <h1>Enkel quiz</h1>
+
+            <p>
+                I dette prosjektet skal du lage en enkel quiz
+                med HTML, CSS og JavaScript. Brukeren skal svare
+                på spørsmål og få tilbakemelding på svaret.
+            </p>
+
+        </section>
+
+
+        <nav class="page-toc" aria-label="Innhold på siden">
+
+            <strong>På denne siden</strong>
+
+            <div class="page-toc-links">
+
+                <a href="#maal">
+                    Mål
+                </a>
+
+                <a href="#oppdrag">
+                    Oppdrag
+                </a>
+
+                <a href="#krav">
+                    Krav
+                </a>
+
+                <a href="#steg">
+                    Steg for steg
+                </a>
+
+                <a href="#kode">
+                    Kodeeksempel
+                </a>
+
+                <a href="#dokumentasjon">
+                    Dokumentasjon
+                </a>
+
+                <a href="#levering">
+                    Levering
+                </a>
+
+                <a href="#refleksjon">
+                    Refleksjon
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <section id="maal">
+
+            <p class="eyebrow">
+                Del 01
+            </p>
+
+            <h2>Mål</h2>
+
+            <p>
+                Når du er ferdig med prosjektet,
+                skal du kunne:
+            </p>
+
+            <ul>
+                <li>koble JavaScript til en HTML-side</li>
+                <li>bruke variabler</li>
+                <li>bruke if/else</li>
+                <li>lage en funksjon</li>
+                <li>hente et HTML-element med JavaScript</li>
+                <li>reagere på et klikk</li>
+                <li>endre innhold på nettsiden med JavaScript</li>
+            </ul>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <section id="oppdrag">
+
+            <p class="eyebrow">
+                Del 02
+            </p>
+
+            <h2>Oppdrag</h2>
+
+            <p>
+                Du skal lage en enkel quiz med minst ett spørsmål.
+            </p>
+
+            <p>
+                Brukeren skal:
+            </p>
+
+            <ul>
+                <li>lese et spørsmål</li>
+                <li>velge eller skrive et svar</li>
+                <li>trykke på en knapp</li>
+                <li>få beskjed om svaret er riktig eller feil</li>
+            </ul>
+
+            <p>
+                Når grunnversjonen fungerer, kan du
+                utvide quizen med flere spørsmål og poeng.
+            </p>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <section id="krav">
+
+            <p class="eyebrow">
+                Del 03
+            </p>
+
+            <h2>Krav</h2>
+
+            <p>
+                Prosjektet skal minst inneholde:
+            </p>
+
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript i egen fil</li>
+                <li>minst ett spørsmål</li>
+                <li>minst ett input-felt eller svaralternativ</li>
+                <li>en knapp</li>
+                <li>en funksjon</li>
+                <li>if/else</li>
+                <li>tilbakemelding til brukeren</li>
+            </ul>
+
+            <div class="material-box">
+
+                <strong>Ekstra utfordring</strong>
+
+                <p>
+                    Legg til flere spørsmål,
+                    poengteller eller resultat på slutten.
+                </p>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <section id="steg">
+
+            <p class="eyebrow">
+                Del 04
+            </p>
+
+            <h2>Steg for steg</h2>
+
+            <h3>1. Lag prosjektmappen</h3>
+
+            <div class="code-box">
+
+<pre><code>quiz/
+│
+├── index.html
+├── style.css
+└── script.js</code></pre>
+
+            </div>
+
+
+            <h3>2. Lag HTML</h3>
+
+            <p>
+                Lag spørsmål, input, knapp og et område
+                der resultatet kan vises.
+            </p>
+
+
+            <h3>3. Koble JavaScript</h3>
+
+            <div class="code-box">
+
+<pre><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+
+            </div>
+
+
+            <h3>4. Finn elementene</h3>
+
+            <p>
+                Bruk JavaScript til å finne input,
+                knapp og resultatfelt.
+            </p>
+
+
+            <h3>5. Reager på klikk</h3>
+
+            <p>
+                Bruk <code>addEventListener()</code>.
+            </p>
+
+
+            <h3>6. Kontroller svaret</h3>
+
+            <p>
+                Bruk <code>if/else</code>
+                til å kontrollere om svaret er riktig.
+            </p>
+
+
+            <h3>7. Vis resultat</h3>
+
+            <p>
+                Endre teksten på siden slik at
+                brukeren får tilbakemelding.
+            </p>
+
+
+            <h3>8. Test</h3>
+
+            <p>
+                Test både riktig og feil svar.
+                Se etter feil i Console.
+            </p>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <section id="kode">
+
+            <p class="eyebrow">
+                Del 05
+            </p>
+
+            <h2>Enkel kodeidé</h2>
+
+            <p>
+                Dette er et enkelt eksempel på logikken.
+                Du kan bygge videre på det.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>const svar =
+    document.querySelector("#svar");
+
+const knapp =
+    document.querySelector("#sjekk");
+
+const resultat =
+    document.querySelector("#resultat");
+
+
+knapp.addEventListener("click", () => {
+
+    if (svar.value === "Oslo") {
+
+        resultat.textContent =
+            "Riktig!";
+
+    } else {
+
+        resultat.textContent =
+            "Prøv igjen.";
+
+    }
+
+});</code></pre>
+
+            </div>
+
+            <p>
+                Prøv først å forstå hva hver del gjør
+                før du kopierer eller endrer koden.
+            </p>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <section id="dokumentasjon">
+
+            <p class="eyebrow">
+                Del 06
+            </p>
+
+            <h2>Dokumentasjon</h2>
+
+            <p>
+                Dokumenter kort hvordan du arbeidet.
+            </p>
+
+            <ul>
+                <li>Hva var planen?</li>
+                <li>Hvordan bygget du quizen?</li>
+                <li>Hvilken JavaScript-kode brukte du?</li>
+                <li>Hvilken feil møtte du?</li>
+                <li>Hvordan løste du feilen?</li>
+            </ul>
+
+            <p>
+                Du kan bruke malene i Ressurser.
+            </p>
+
+            <a href="../../../ressurser/maler/index.html">
+                Åpne maler
+            </a>
+
+            <br>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <section id="levering">
+
+            <p class="eyebrow">
+                Del 07
+            </p>
+
+            <h2>Levering</h2>
+
+            <p>
+                Kontroller før levering:
+            </p>
+
+            <ul>
+                <li>HTML-filen fungerer</li>
+                <li>CSS-filen er koblet til</li>
+                <li>JavaScript-filen er koblet til</li>
+                <li>knappen fungerer</li>
+                <li>riktig svar gir riktig tilbakemelding</li>
+                <li>feil svar gir riktig tilbakemelding</li>
+                <li>Console viser ingen unødvendige feil</li>
+                <li>dokumentasjonen er ferdig</li>
+            </ul>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <section id="refleksjon">
+
+            <p class="eyebrow">
+                Del 08
+            </p>
+
+            <h2>Refleksjon</h2>
+
+            <ol>
+                <li>Hva fungerte bra?</li>
+                <li>Hva var vanskeligst?</li>
+                <li>Hvordan brukte du if/else?</li>
+                <li>Hvordan reagerer programmet på et klikk?</li>
+                <li>Hvilken feil måtte du løse?</li>
+                <li>Hva ville du lagt til hvis du hadde mer tid?</li>
+            </ol>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <div id="site-footer"></div>
+
+
+    <script src="../../../js/main.js"></script>
+
+</body>
+
+</html>

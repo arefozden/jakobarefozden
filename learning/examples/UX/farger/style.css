@@ -1,0 +1,27 @@
+        body {
+            font-family: Arial;
+            max-width: 750px;
+            margin: 40px auto;
+            padding: 20px
+        }
+
+        .kort {
+            padding: 20px;
+            border: 1px solid #aaa;
+            margin: 15px 0
+        }
+
+        .darlig {
+            color: #f3efef;
+            background: #fff
+        }
+
+        .god {
+            color: #222;
+            background: #fff
+        }
+
+        .feil {
+            color: #b00020;
+            font-weight: bold
+        }

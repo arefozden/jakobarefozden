@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Git & GitHub-ressurser | IM Portal</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <div id="site-header"></div>
+
+    <main id="top">
+
+        <!-- BREADCRUMB -->
+
+        <div class="breadcrumb">
+            <a href="../../index.html">IM Portal</a>
+            <span>›</span>
+
+            <a href="../index.html">Ressurser</a>
+            <span>›</span>
+
+            <span>Git & GitHub</span>
+        </div>
+
+
+        <!-- INTRO -->
+
+        <section class="page-intro">
+
+            <p class="eyebrow">
+                Versjonskontroll
+            </p>
+
+            <h1>Git & GitHub</h1>
+
+            <p>
+                Hurtigoversikt over Git, GitHub, repositories,
+                commits, push, pull og publisering med GitHub Pages.
+            </p>
+
+        </section>
+
+
+        <!-- INNHOLDSMENY -->
+
+        <nav class="page-toc" aria-label="Innhold på siden">
+
+            <strong>På denne siden</strong>
+
+            <div class="page-toc-links">
+
+                <a href="#git">
+                    Git
+                </a>
+
+                <a href="#github">
+                    GitHub
+                </a>
+
+                <a href="#arbeidsflyt">
+                    Arbeidsflyt
+                </a>
+
+                <a href="#kommandoer">
+                    Kommandoer
+                </a>
+
+                <a href="#commit">
+                    Commit
+                </a>
+
+                <a href="#pages">
+                    GitHub Pages
+                </a>
+
+                <a href="#problemer">
+                    Vanlige problemer
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- =========================
+             GIT
+        ========================== -->
+
+        <section id="git">
+
+            <h2>Hva er Git?</h2>
+
+            <p>
+                Git er et system for versjonskontroll.
+                Det holder oversikt over endringer du gjør
+                i filene i et prosjekt.
+            </p>
+
+            <p>
+                Med Git kan du blant annet se historikken
+                i prosjektet og gå tilbake til tidligere versjoner.
+            </p>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             GITHUB
+        ========================== -->
+
+        <section id="github">
+
+            <h2>Hva er GitHub?</h2>
+
+            <p>
+                GitHub er en nettbasert tjeneste der du kan
+                lagre Git-prosjekter, dele kode og samarbeide
+                med andre.
+            </p>
+
+        </section>
+
+
+        <section>
+
+            <h2>Repository</h2>
+
+            <p>
+                Et repository, ofte kalt et repo,
+                er prosjektmappen som Git holder oversikt over.
+            </p>
+
+            <p>
+                Et repository kan inneholde kode,
+                bilder, dokumentasjon og andre filer
+                som hører til prosjektet.
+            </p>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             ARBEIDSFLYT
+        ========================== -->
+
+        <section id="arbeidsflyt">
+
+            <h2>Vanlig Git-arbeidsflyt</h2>
+
+            <p>
+                En enkel arbeidsflyt kan se slik ut:
+            </p>
+
+            <div class="code-box">
+
+<pre><code>git status
+
+git add .
+
+git commit -m "Oppdater forsiden"
+
+git push</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>En enkel huskeregel</h2>
+
+            <div class="code-box">
+
+<pre><code>1. Gjør endringer
+
+2. Test
+
+3. git status
+
+4. git add .
+
+5. git commit -m "Beskriv endringen"
+
+6. git push</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             KOMMANDOER
+        ========================== -->
+
+        <section id="kommandoer">
+
+            <h2>git status</h2>
+
+            <p>
+                Viser hvilke filer som er endret,
+                og hvilke filer som er klare for commit.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>git status</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>git add</h2>
+
+            <p>
+                Legger endringer til staging-området
+                før du lager en commit.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>git add .</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>git push</h2>
+
+            <p>
+                Sender lokale commits til GitHub.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>git push</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>git pull</h2>
+
+            <p>
+                Henter de nyeste endringene fra GitHub.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>git pull</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>git clone</h2>
+
+            <p>
+                Hvis et prosjekt allerede finnes på GitHub,
+                kan du laste det ned med <code>git clone</code>.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>git clone URL-TIL-REPOSITORY</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             COMMIT
+        ========================== -->
+
+        <section id="commit">
+
+            <h2>git commit</h2>
+
+            <p>
+                En commit lager et lagringspunkt
+                i prosjektets historikk.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>git commit -m "Legg til ny ressursside"</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Gode commit-meldinger</h2>
+
+            <p>
+                Commit-meldingen bør kort forklare
+                hva som faktisk er endret.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>git commit -m "Legg til Python-ressurser"
+
+git commit -m "Rett feil i navigasjonen"
+
+git commit -m "Oppdater design på forsiden"</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Dårlige commit-meldinger</h2>
+
+            <div class="code-box">
+
+<pre><code>git commit -m "ting"
+
+git commit -m "nytt"
+
+git commit -m "fix"</code></pre>
+
+            </div>
+
+            <p>
+                Slike meldinger gjør det vanskelig
+                å forstå prosjektets historikk senere.
+            </p>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             GITHUB PAGES
+        ========================== -->
+
+        <section id="pages">
+
+            <h2>GitHub Pages</h2>
+
+            <p>
+                GitHub Pages kan brukes til å publisere
+                statiske nettsider direkte fra et repository.
+            </p>
+
+            <p>
+                Det passer godt for nettsider som bruker
+                HTML, CSS og JavaScript.
+            </p>
+
+        </section>
+
+
+        <section>
+
+            <h2>Publisere en nettside</h2>
+
+            <ol>
+                <li>Opprett eller åpne repository på GitHub.</li>
+                <li>Last opp eller push nettsiden til repository.</li>
+                <li>Åpne <strong>Settings</strong>.</li>
+                <li>Velg <strong>Pages</strong>.</li>
+                <li>Velg hvilken branch som skal publiseres.</li>
+                <li>Lagre innstillingene.</li>
+                <li>Vent til GitHub oppretter nettadressen.</li>
+            </ol>
+
+        </section>
+
+
+        <section>
+
+            <h2>Før du publiserer</h2>
+
+            <ul>
+                <li>Fungerer nettsiden lokalt?</li>
+                <li>Er alle filene lagret?</li>
+                <li>Fungerer lenkene?</li>
+                <li>Er det feil i Console?</li>
+                <li>Er filstrukturen ryddig?</li>
+            </ul>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             VANLIGE PROBLEMER
+        ========================== -->
+
+        <section id="problemer">
+
+            <h2>Vanlige problemer</h2>
+
+            <p>
+                Hvis Git eller GitHub ikke fungerer som forventet,
+                start med å lese feilmeldingen.
+            </p>
+
+            <ul>
+                <li>Er Git installert?</li>
+                <li>Er du i riktig prosjektmappe?</li>
+                <li>Er repository koblet til riktig remote?</li>
+                <li>Har du internettforbindelse?</li>
+                <li>Har du hentet de nyeste endringene?</li>
+            </ul>
+
+        </section>
+
+
+        <section>
+
+            <h2>Kontroller hvor du er</h2>
+
+            <p>
+                Mange feil skjer fordi terminalen står
+                i feil mappe.
+            </p>
+
+            <p>
+                Kontroller alltid at du arbeider
+                inne i riktig prosjekt før du bruker Git-kommandoene.
+            </p>
+
+        </section>
+
+
+        <section>
+
+            <h2>Hvis push ikke fungerer</h2>
+
+            <p>
+                Det kan hende at GitHub har endringer
+                som du ikke har lokalt.
+            </p>
+
+            <p>
+                Da kan det være nødvendig å hente
+                de nyeste endringene først.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>git pull
+
+git push</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <div id="site-footer"></div>
+
+
+    <script src="../../js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+        body {
+            font-family: Arial;
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 20px
+        }
+
+        a,
+        button,
+        input {
+            font-size: 18px;
+            margin: 10px 8px 10px 0;
+            padding: 10px
+        }
+
+        :focus-visible {
+            outline: 4px solid #ff8800;
+            outline-offset: 4px
+        }

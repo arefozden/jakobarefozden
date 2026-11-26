@@ -1,0 +1,78 @@
+body {
+    background-color: lightgray;
+    font-family: Arial;
+}
+
+
+
+
+nav {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+nav a {
+    color: black;
+}
+
+nav a:hover {
+    color: blue;
+}
+
+.intro {
+    text-align: center;
+    margin: 20px;
+}
+h1 {
+    color: darkblue;
+}
+
+
+h2 {
+    color: darkgreen;
+}
+
+
+p {
+    font-size: 16px;
+}
+
+
+img {
+    width: 250px;
+}
+
+
+/* Alle kort får denne stilen */
+
+.kort {
+    width: 300px;
+
+    padding: 20px;
+
+    margin: 20px;
+
+    border: 2px solid black;
+
+    background-color: white;
+}
+
+
+/* Bare favorittkortet får denne stilen */
+
+.favoritt {
+    border: 5px solid darkblue;
+    background-color: lightyellow;
+}
+
+
+footer {
+    text-align: center;
+}
+
+.kort-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}

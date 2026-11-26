@@ -1,0 +1,16 @@
+        body {
+            font-family: Arial;
+            max-width: 800px;
+            margin: 35px auto;
+            padding: 15px
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px
+        }
+
+        .pynt {
+            font-size: 48px
+        }

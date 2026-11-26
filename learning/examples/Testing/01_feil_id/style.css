@@ -1,0 +1,2 @@
+* {box-sizing:border-box} body {font-family:Arial,sans-serif;max-width:900px;margin:35px auto;padding:18px;line-height:1.5} h1 {color:#17365d} a:focus-visible,button:focus-visible {outline:3px solid orange;outline-offset:3px}
+button {background:#2563eb;color:white;border:0;padding:12px 20px;border-radius:8px;cursor:pointer}

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Skolekantina</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+    <header>
+        <h1>Skolekantina</h1>
+    </header>
+    <nav aria-label="Hovedmeny"><a href="#meny">Dagens meny</a><a href="#kontakt">Kontakt</a></nav>
+    <main>
+        <section id="meny">
+            <h2>Dagens meny</h2>
+            <h3>Varmmat</h3>
+            <p>Tomatsuppe og brød.</p>
+            <h3>Drikke</h3>
+            <p>Vann og juice.</p><button id="vis">Vis åpningstid</button>
+            <p id="melding" aria-live="polite"></p>
+        </section>
+    </main>
+    <footer id="kontakt">Kontakt: kantina@eksempel.no</footer>
+    </div>
+    <script>document.querySelector('#vis').addEventListener('click', function () { document.querySelector('#melding').textContent = 'Åpent kl. 09–14.'; });</script>
+</body>
+
+</html>

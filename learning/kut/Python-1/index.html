@@ -1,0 +1,90 @@
+<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Python · Beginner · Jakob Aref Øzden</title><link rel="icon" href="../../../favicon.png"><link rel="stylesheet" href="../../../learning/learning.css"><script defer src="../../../assets/js/site.js"></script></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../../../">Jakob Aref <i>Øzden.</i></a><nav class="nav-links"><a href="../../../">Home</a><a href="../../../about/">About</a><a href="../../../projects/">Projects</a><a href="../../../skills/">Skills</a><a href="../../../learning/">Learning</a><a href="../../../blog/">Blog</a><a href="../../../contact/">Contact</a><a href="../../../cv/">CV</a></nav><button class="theme-btn" data-theme-toggle>◐ Theme</button></div></header><main class="container page"><section class="learn-hero"><span class="learn-label">KUT / Python-1</span><h1>Python · Beginner</h1><p>Input, arithmetic, conditions and error handling</p></section><a class="link" href="../">← All modules</a> · <a class="link" href="../../playground/">Code playground</a><p>Original Norwegian classroom examples from the KUT repository.</p><input class="learn-search" data-filter placeholder="Find an example" aria-label="Find an example"><div class="lesson-list"><div class="lesson-row" data-item><span>eksempel-biletkalk1.py</span><a href="../../examples/Python-1/eksempel-biletkalk1.py">Open original →</a></div><details><summary>View Python source</summary><pre># Enkel billettkalkulator
+
+antall = int(input(&quot;Hvor mange billetter vil du kjøpe? &quot;))
+pris = float(input(&quot;Hva koster én billett? &quot;))
+
+total = antall * pris
+
+print(&quot;Totalpris:&quot;, total, &quot;kr&quot;)</pre></details><div class="lesson-row" data-item><span>eksempel-biletkalk2.py</span><a href="../../examples/Python-1/eksempel-biletkalk2.py">Open original →</a></div><details><summary>View Python source</summary><pre># Billettkalkulator med rabatt
+
+antall = int(input(&quot;Hvor mange billetter vil du kjøpe? &quot;))
+pris = float(input(&quot;Hva koster én billett? &quot;))
+
+total = antall * pris
+
+if antall &gt;= 5:
+    rabatt = total * 0.20
+    total = total - rabatt
+    print(&quot;Du får 20 % rabatt!&quot;)
+else:
+    print(&quot;Ingen rabatt.&quot;)
+
+print(&quot;Totalpris:&quot;, total, &quot;kr&quot;)</pre></details><div class="lesson-row" data-item><span>if.py</span><a href="../../examples/Python-1/if.py">Open original →</a></div><details><summary>View Python source</summary><pre>alder = int(input(&quot;Alder: &quot;))
+if alder &gt;= 16:
+    print(&quot;16 år eller eldre&quot;)
+else:
+    print(&quot;Under 16 år&quot;)
+</pre></details><div class="lesson-row" data-item><span>input.py</span><a href="../../examples/Python-1/input.py">Open original →</a></div><details><summary>View Python source</summary><pre>navn = input(&quot;Hva heter du? &quot;)
+print(&quot;Hei&quot;, navn)
+# input() gir tekst (str)
+</pre></details><div class="lesson-row" data-item><span>mitt-forste.py</span><a href="../../examples/Python-1/mitt-forste.py">Open original →</a></div><details><summary>View Python source</summary><pre>print(&quot;Hei, verden!&quot;)
+print(&quot;Velkommen til Python&quot;)</pre></details><div class="lesson-row" data-item><span>regning.py</span><a href="../../examples/Python-1/regning.py">Open original →</a></div><details><summary>View Python source</summary><pre>antall = int(input(&quot;Antall: &quot;))
+pris = 25
+print(&quot;Sum:&quot;, antall * pris)
+</pre></details><div class="lesson-row" data-item><span>try/try1.py</span><a href="../../examples/Python-1/try/try1.py">Open original →</a></div><details><summary>View Python source</summary><pre>alder = input(&quot;Hvor gammel er du? &quot;)
+
+print(alder + &quot; år&quot;)
+print(type(alder))</pre></details><div class="lesson-row" data-item><span>try/try2.py</span><a href="../../examples/Python-1/try/try2.py">Open original →</a></div><details><summary>View Python source</summary><pre>alder = int(input(&quot;Hvor gammel er du? &quot;))
+hoyde = float(input(&quot;Hvor høy er du i meter? &quot;))
+
+print(&quot;Neste år er du&quot;, alder + 1, &quot;år.&quot;)
+print(&quot;Høyden din er&quot;, hoyde, &quot;meter.&quot;)</pre></details><div class="lesson-row" data-item><span>try/try3.py</span><a href="../../examples/Python-1/try/try3.py">Open original →</a></div><details><summary>View Python source</summary><pre>try:
+    alder = int(input(&quot;Hvor gammel er du? &quot;))
+    print(&quot;Neste år er du&quot;, alder + 1, &quot;år.&quot;)
+
+except ValueError:
+    print(&quot;Feil! Du må skrive inn et tall.&quot;)</pre></details><div class="lesson-row" data-item><span>try/try4.py</span><a href="../../examples/Python-1/try/try4.py">Open original →</a></div><details><summary>View Python source</summary><pre>try:
+    antall = int(input(&quot;Antall billetter: &quot;))
+    print(&quot;Total:&quot;, antall * 50)
+except ValueError:
+    print(&quot;Skriv et helt tall!&quot;)
+</pre></details><div class="lesson-row" data-item><span>try/try5.py</span><a href="../../examples/Python-1/try/try5.py">Open original →</a></div><details><summary>View Python source</summary><pre># Billettkalkulator med feilhåndtering
+
+try:
+    antall = int(input(&quot;Hvor mange billetter? &quot;))
+    pris = float(input(&quot;Pris per billett? &quot;))
+
+    total = antall * pris
+
+    if antall &gt;= 5:
+        total = total * 0.80
+        print(&quot;Du får 20 % rabatt!&quot;)
+
+    print(&quot;Totalpris:&quot;, total, &quot;kr&quot;)
+
+except ValueError:
+    print(&quot;Feil! Du må skrive inn gyldige tall.&quot;)</pre></details><div class="lesson-row" data-item><span>try/try6.py</span><a href="../../examples/Python-1/try/try6.py">Open original →</a></div><details><summary>View Python source</summary><pre># Billettkalkulator med feilhåndtering
+
+try:
+    antall = int(input(&quot;Hvor mange billetter? &quot;))
+    pris = float(input(&quot;Pris per billett? &quot;))
+
+    if antall &lt;= 0 or pris &lt;= 0:
+        print(&quot;Feil! Antall og pris må være større enn 0.&quot;)
+
+    else:
+        total = antall * pris
+
+        if antall &gt;= 5:
+            total = total * 0.80
+            print(&quot;Du får 20 % rabatt!&quot;)
+
+        print(&quot;Totalpris:&quot;, total, &quot;kr&quot;)
+
+except ValueError:
+    print(&quot;Feil! Du må skrive inn gyldige tall.&quot;)</pre></details><div class="lesson-row" data-item><span>variabler.py</span><a href="../../examples/Python-1/variabler.py">Open original →</a></div><details><summary>View Python source</summary><pre>navn = &quot;Sara&quot;
+alder = 16
+pris = 49.5
+print(navn, alder, pris)
+# navn-&gt;str, alder-&gt;int, pris-&gt;float
+</pre></details></div></main><footer class="footer"><div class="container footer-inner">Learning by building · Jakob Aref Øzden</div></footer><script>document.querySelectorAll("[data-filter]").forEach(i=>i.addEventListener("input",()=>document.querySelectorAll("[data-item]").forEach(x=>x.hidden=!x.textContent.toLowerCase().includes(i.value.toLowerCase()))));</script></body></html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="no">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Feil ID</title>
+  <link rel="stylesheet" href="kurs.css">
+</head>
+
+<body>
+  <header>
+    <h1>Uke 46 · Testing og feilsøking</h1>
+    <p>Minikurs med HTML, CSS og JavaScript</p>
+  </header>
+  <main><a class="back" href="index.html">← Tilbake til oversikten</a><span class="tag">Tema 1 av 6</span>
+    <h2>Feil ID</h2>
+    <p class="lead">JavaScript finner ikke knappen</p>
+    <div class="panel"><strong>Oppgave:</strong> Sammenlign id i HTML med querySelector i
+      JavaScript.<br><strong>Diskuter:</strong> Hva viser Console når elementet ikke finnes?</div>
+    <h2 style="margin-top:26px">Prøv begge versjonene</h2>
+    <div class="pair">
+      <section class="panel">
+        <h2>1 · Feil versjon</h2><a class="btn " href="01_feil_id/index_feil.html" target="_blank" rel="noopener">Åpne i
+          ny fane</a><iframe class="preview" src="01_feil_id/index_feil.html" title="1 · Feil versjon"
+          loading="lazy"></iframe>
+        <p><small>For Console og mobiltest: Åpne i ny fane og trykk F12.</small></p>
+        <details>
+          <summary>Vis index_feil.html</summary>
+          <pre
+            class="code"><code>&lt;!DOCTYPE html&gt;&lt;html lang=&quot;no&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;&lt;title&gt;Feil ID&lt;/title&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;Feil ID&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Oppgave:&lt;/strong&gt; Klikk på knappen. Åpne Console (F12). Finn feilen og rett ID-en.&lt;/p&gt;&lt;button id=&quot;sendKnapp&quot;&gt;Send melding&lt;/button&gt;&lt;p id=&quot;resultat&quot;&gt;Ingen melding ennå.&lt;/p&gt;&lt;script src=&quot;script_feil.js&quot; defer&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+        </details>
+        <details>
+          <summary>Vis script_feil.js</summary>
+          <pre class="code"><code>// FEIL: HTML-knappen heter sendKnapp, ikke knapp.
+const knapp = document.querySelector(&quot;#knapp&quot;);
+console.log(&quot;Fant knapp:&quot;, knapp);
+knapp.addEventListener(&quot;click&quot;, function () {
+  document.querySelector(&quot;#resultat&quot;).textContent = &quot;Meldingen er sendt!&quot;;
+});
+</code></pre>
+        </details>
+        <details>
+          <summary>Vis style.css</summary>
+          <pre class="code"><code>* {box-sizing:border-box} body {font-family:Arial,sans-serif;max-width:900px;margin:35px auto;padding:18px;line-height:1.5} h1 {color:#17365d} a:focus-visible,button:focus-visible {outline:3px solid orange;outline-offset:3px}
+button {background:#2563eb;color:white;border:0;padding:12px 20px;border-radius:8px;cursor:pointer}
+</code></pre>
+        </details>
+      </section>
+      <section class="panel">
+        <h2>2 · Rettet versjon</h2><a class="btn good" href="01_feil_id/index_riktig.html" target="_blank"
+          rel="noopener">Åpne i ny fane</a><iframe class="preview" src="01_feil_id/index_riktig.html"
+          title="2 · Rettet versjon" loading="lazy"></iframe>
+        <p><small>For Console og mobiltest: Åpne i ny fane og trykk F12.</small></p>
+        <details>
+          <summary>Vis index_riktig.html</summary>
+          <pre
+            class="code"><code>&lt;!DOCTYPE html&gt;&lt;html lang=&quot;no&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;&lt;title&gt;Feil ID&lt;/title&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;Feil ID&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Oppgave:&lt;/strong&gt; Klikk på knappen. Åpne Console (F12). Finn feilen og rett ID-en.&lt;/p&gt;&lt;button id=&quot;sendKnapp&quot;&gt;Send melding&lt;/button&gt;&lt;p id=&quot;resultat&quot;&gt;Ingen melding ennå.&lt;/p&gt;&lt;script src=&quot;script_riktig.js&quot; defer&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+        </details>
+        <details>
+          <summary>Vis script_riktig.js</summary>
+          <pre class="code"><code>// RETTET: Samme ID i HTML og JavaScript.
+const knapp = document.querySelector(&quot;#sendKnapp&quot;);
+console.log(&quot;Fant knapp:&quot;, knapp);
+knapp.addEventListener(&quot;click&quot;, function () {
+  document.querySelector(&quot;#resultat&quot;).textContent = &quot;Meldingen er sendt!&quot;;
+});
+</code></pre>
+        </details>
+        <details>
+          <summary>Vis style.css</summary>
+          <pre class="code"><code>* {box-sizing:border-box} body {font-family:Arial,sans-serif;max-width:900px;margin:35px auto;padding:18px;line-height:1.5} h1 {color:#17365d} a:focus-visible,button:focus-visible {outline:3px solid orange;outline-offset:3px}
+button {background:#2563eb;color:white;border:0;padding:12px 20px;border-radius:8px;cursor:pointer}
+</code></pre>
+        </details>
+      </section>
+    </div>
+    <div class="panel" style="margin-top:20px">
+      <h2>Mini-testlogg</h2>
+      <p>Hva testet du? Hva skjedde i feilversjonen? Hva ble rettet? Test én gang til.</p>
+    </div>
+    <p><a class="btn secondary" href="index.html">Alle temaer</a><a class="btn" href="tema_02.html">Neste tema →</a></p>
+  </main>
+  <footer>VG1 · Konseptutvikling og programmering</footer>
+</body>
+
+</html>

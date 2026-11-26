@@ -1,0 +1,2 @@
+# Portfolio update
+Preserves the supplied personal website and adds a Learning Hub, KUT module index, original code examples and IM Portal web resources. The original Norwegian examples are not translated. Office documents, PDFs, nested ZIPs and Git metadata are intentionally excluded from publication; review original examples and media for publication rights and personal information before deploying. Existing TF modules are retained, not claimed to be complete. Use a local HTTP server to preview.

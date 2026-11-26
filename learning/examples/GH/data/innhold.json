@@ -1,0 +1,554 @@
+{
+  "sections": [
+    {
+      "id": "INTRO",
+      "name": "Oppstart",
+      "description": "Kom i gang med nettsider og filstruktur",
+      "icon": "rocket"
+    },
+    {
+      "id": "HTML",
+      "name": "HTML",
+      "description": "Struktur, innhold, lenker og semantikk",
+      "icon": "code"
+    },
+    {
+      "id": "CSS",
+      "name": "CSS",
+      "description": "Utseende, boksmodell, layout og flexbox",
+      "icon": "palette"
+    },
+    {
+      "id": "UX",
+      "name": "Brukervennlighet",
+      "description": "Farger, tilgjengelighet og responsivt design",
+      "icon": "access"
+    },
+    {
+      "id": "JavaScript",
+      "name": "JavaScript",
+      "description": "Variabler, betingelser, funksjoner og DOM",
+      "icon": "braces"
+    },
+    {
+      "id": "Testing",
+      "name": "Testing og feilsøking",
+      "description": "Finn feil, test og forbedre løsninger",
+      "icon": "bug"
+    }
+  ],
+  "items": [
+    {
+      "section": "INTRO",
+      "title": "Gaming nettsted",
+      "url": "eksempler/INTRO/gaming-nettsted/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 0
+    },
+    {
+      "section": "INTRO",
+      "title": "Min forste side",
+      "url": "eksempler/INTRO/min-forste-side/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 1
+    },
+    {
+      "section": "INTRO",
+      "title": "Mitt lille nettsted",
+      "url": "eksempler/INTRO/mitt-forste-nettsted/Mitt-lille-nettsted/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 2
+    },
+    {
+      "section": "INTRO",
+      "title": "Mitt forste nettsted",
+      "url": "eksempler/INTRO/mitt-forste-nettsted/mitt-forste-nettsted/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 3
+    },
+    {
+      "section": "INTRO",
+      "title": "Mitt nettsted",
+      "url": "eksempler/INTRO/mitt-nettsted/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 4
+    },
+    {
+      "section": "INTRO",
+      "title": "Mitt nettsted med nav",
+      "url": "eksempler/INTRO/mitt-nettsted%20med%20nav/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 5
+    },
+    {
+      "section": "HTML",
+      "title": "Hallo verden",
+      "url": "eksempler/HTML/hallo-verden/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 6
+    },
+    {
+      "section": "HTML",
+      "title": "Interesseside",
+      "url": "eksempler/HTML/interesseside/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 7
+    },
+    {
+      "section": "HTML",
+      "title": "Min første nettside",
+      "url": "eksempler/HTML/min-forste-nettside/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 8
+    },
+    {
+      "section": "HTML",
+      "title": "Min interesse",
+      "url": "eksempler/HTML/min_interesse/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 9
+    },
+    {
+      "section": "HTML",
+      "title": "Heiverden",
+      "url": "eksempler/HTML/test/HeiVerden.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 10
+    },
+    {
+      "section": "HTML",
+      "title": "Kontakt",
+      "url": "eksempler/HTML/test/kontakt.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 11
+    },
+    {
+      "section": "HTML",
+      "title": "Tabell",
+      "url": "eksempler/HTML/test/tabell.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 12
+    },
+    {
+      "section": "HTML",
+      "title": "Min uke",
+      "url": "eksempler/HTML/timeplan/min-uke.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 13
+    },
+    {
+      "section": "HTML",
+      "title": "Timeplan",
+      "url": "eksempler/HTML/timeplan/timeplan.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 14
+    },
+    {
+      "section": "CSS",
+      "title": "Boksmodell",
+      "url": "eksempler/CSS/boksmodell/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 15
+    },
+    {
+      "section": "CSS",
+      "title": "Boksmodell – oppgave",
+      "url": "eksempler/CSS/boksmodell-oppg/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 16
+    },
+    {
+      "section": "CSS",
+      "title": "Flexbox",
+      "url": "eksempler/CSS/flexbox/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 17
+    },
+    {
+      "section": "CSS",
+      "title": "Interesseside",
+      "url": "eksempler/CSS/interesseside/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 18
+    },
+    {
+      "section": "CSS",
+      "title": "Mitt nettsted",
+      "url": "eksempler/CSS/mitt-nettsted/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 19
+    },
+    {
+      "section": "UX",
+      "title": "Eksempel · 01 farger kontrast",
+      "url": "eksempler/UX/Uke45_eksempelkoder/01_farger_kontrast.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 20
+    },
+    {
+      "section": "UX",
+      "title": "Eksempel · 02 bilder alttekst",
+      "url": "eksempler/UX/Uke45_eksempelkoder/02_bilder_alttekst.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 21
+    },
+    {
+      "section": "UX",
+      "title": "Eksempel · 03 overskrifter semantikk",
+      "url": "eksempler/UX/Uke45_eksempelkoder/03_overskrifter_semantikk.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 22
+    },
+    {
+      "section": "UX",
+      "title": "Eksempel · 04 tastatur fokus",
+      "url": "eksempler/UX/Uke45_eksempelkoder/04_tastatur_fokus.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 23
+    },
+    {
+      "section": "UX",
+      "title": "Eksempel · 05 responsive kort",
+      "url": "eksempler/UX/Uke45_eksempelkoder/05_responsive_kort.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 24
+    },
+    {
+      "section": "UX",
+      "title": "Eksempel · 06 viewport",
+      "url": "eksempler/UX/Uke45_eksempelkoder/06_viewport.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 25
+    },
+    {
+      "section": "UX",
+      "title": "Bilder",
+      "url": "eksempler/UX/bilder/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 26
+    },
+    {
+      "section": "UX",
+      "title": "Farger",
+      "url": "eksempler/UX/farger/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 27
+    },
+    {
+      "section": "UX",
+      "title": "Overskrift",
+      "url": "eksempler/UX/overskrift/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 28
+    },
+    {
+      "section": "UX",
+      "title": "Responsive",
+      "url": "eksempler/UX/responsive/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 29
+    },
+    {
+      "section": "UX",
+      "title": "Tastatur",
+      "url": "eksempler/UX/tastatur/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 30
+    },
+    {
+      "section": "UX",
+      "title": "Viewport",
+      "url": "eksempler/UX/viewport/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 31
+    },
+    {
+      "section": "JavaScript",
+      "title": "Sammenligning · Sammenligning · else if",
+      "url": "eksempler/JavaScript/Sammenligning/elseIf/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 32
+    },
+    {
+      "section": "JavaScript",
+      "title": "Sammenligning · Sammenligning · Flere",
+      "url": "eksempler/JavaScript/Sammenligning/flere/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 33
+    },
+    {
+      "section": "JavaScript",
+      "title": "Sammenligning · Sammenligning · If",
+      "url": "eksempler/JavaScript/Sammenligning/if/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 34
+    },
+    {
+      "section": "JavaScript",
+      "title": "Sammenligning · Sammenligning · if / else",
+      "url": "eksempler/JavaScript/Sammenligning/ifElse/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 35
+    },
+    {
+      "section": "JavaScript",
+      "title": "Sammenligning · Sammenligning · Intro",
+      "url": "eksempler/JavaScript/Sammenligning/intro/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 36
+    },
+    {
+      "section": "JavaScript",
+      "title": "Variabler",
+      "url": "eksempler/JavaScript/Variabler/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 37
+    },
+    {
+      "section": "JavaScript",
+      "title": "Arrays",
+      "url": "eksempler/JavaScript/arrays/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 38
+    },
+    {
+      "section": "JavaScript",
+      "title": "Console",
+      "url": "eksempler/JavaScript/console/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 39
+    },
+    {
+      "section": "JavaScript",
+      "title": "Datatyper",
+      "url": "eksempler/JavaScript/datatyper/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 40
+    },
+    {
+      "section": "JavaScript",
+      "title": "Dom",
+      "url": "eksempler/JavaScript/dom/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 41
+    },
+    {
+      "section": "JavaScript",
+      "title": "For-løkke",
+      "url": "eksempler/JavaScript/enkelfor/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 42
+    },
+    {
+      "section": "JavaScript",
+      "title": "Event1",
+      "url": "eksempler/JavaScript/event1/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 43
+    },
+    {
+      "section": "JavaScript",
+      "title": "Event2",
+      "url": "eksempler/JavaScript/event2/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 44
+    },
+    {
+      "section": "JavaScript",
+      "title": "Hendelser og CSS",
+      "url": "eksempler/JavaScript/eventCss/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 45
+    },
+    {
+      "section": "JavaScript",
+      "title": "Feilsøking",
+      "url": "eksempler/JavaScript/feilsoking/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 46
+    },
+    {
+      "section": "JavaScript",
+      "title": "Feilsøking 2",
+      "url": "eksempler/JavaScript/feilsoking2/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 47
+    },
+    {
+      "section": "JavaScript",
+      "title": "Funksjoner · Funksjoner · Enkel1",
+      "url": "eksempler/JavaScript/funksjoner/enkel1/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 48
+    },
+    {
+      "section": "JavaScript",
+      "title": "Funksjoner · Funksjoner · Enkel2",
+      "url": "eksempler/JavaScript/funksjoner/enkel2/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 49
+    },
+    {
+      "section": "JavaScript",
+      "title": "Funksjoner · Funksjoner · Enkelregning",
+      "url": "eksempler/JavaScript/funksjoner/enkelRegning/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 50
+    },
+    {
+      "section": "JavaScript",
+      "title": "Input",
+      "url": "eksempler/JavaScript/input/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 51
+    },
+    {
+      "section": "JavaScript",
+      "title": "Input ifelse",
+      "url": "eksempler/JavaScript/input-ifelse/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 52
+    },
+    {
+      "section": "JavaScript",
+      "title": "Intro",
+      "url": "eksempler/JavaScript/intro/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 53
+    },
+    {
+      "section": "JavaScript",
+      "title": "Oppgaver 1–2",
+      "url": "eksempler/JavaScript/oppg1-2/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 54
+    },
+    {
+      "section": "JavaScript",
+      "title": "querySelector",
+      "url": "eksempler/JavaScript/querySelector/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 55
+    },
+    {
+      "section": "JavaScript",
+      "title": "Endre tekst",
+      "url": "eksempler/JavaScript/textContext/index.html",
+      "kind": "eksempel",
+      "description": "Åpne og prøv eksemplet i nettleseren.",
+      "order": 56
+    },
+    {
+      "section": "Testing",
+      "title": "Minikurs: Testing og feilsøking",
+      "url": "eksempler/Testing/index.html",
+      "kind": "kurs",
+      "description": "Seks leksjoner med forklaring, feil kode og riktig løsning.",
+      "order": 0
+    },
+    {
+      "section": "Testing",
+      "title": "Feil ID",
+      "url": "eksempler/Testing/tema_01.html",
+      "kind": "leksjon",
+      "description": "Undersøk feilen, test løsningen og sammenlign.",
+      "order": 1
+    },
+    {
+      "section": "Testing",
+      "title": "Skript lastes for tidlig",
+      "url": "eksempler/Testing/tema_02.html",
+      "kind": "leksjon",
+      "description": "Undersøk feilen, test løsningen og sammenlign.",
+      "order": 2
+    },
+    {
+      "section": "Testing",
+      "title": "Console og feilmeldinger",
+      "url": "eksempler/Testing/tema_03.html",
+      "kind": "leksjon",
+      "description": "Undersøk feilen, test løsningen og sammenlign.",
+      "order": 3
+    },
+    {
+      "section": "Testing",
+      "title": "Feil CSS-klasse",
+      "url": "eksempler/Testing/tema_04.html",
+      "kind": "leksjon",
+      "description": "Undersøk feilen, test løsningen og sammenlign.",
+      "order": 4
+    },
+    {
+      "section": "Testing",
+      "title": "Input og grensetilfeller",
+      "url": "eksempler/Testing/tema_05.html",
+      "kind": "leksjon",
+      "description": "Undersøk feilen, test løsningen og sammenlign.",
+      "order": 5
+    },
+    {
+      "section": "Testing",
+      "title": "Mobil og brukertest",
+      "url": "eksempler/Testing/tema_06.html",
+      "kind": "leksjon",
+      "description": "Undersøk feilen, test løsningen og sammenlign.",
+      "order": 6
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+Script kjører for tidlig
+
+I feil-versjonen kjøres script.js før knappen finnes. Sammenlign med riktig-versjonen som bruker defer.
+
+1. Åpne index_feil.html.
+2. Trykk F12 og velg Console.
+3. Finn feilen og prøv å rette den selv.
+4. Sammenlign med index_riktig.html og script_riktig.js.

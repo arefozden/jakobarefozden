@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Min planlegger | Min nettside</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/planlegger.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrap header-inner"><a class="brand" href="index.html">Min nettside<span
+                    class="brand-dot">.</span></a>
+            <nav aria-label="Hovedmeny"><a href="index.html">Hjem</a><a href="hobbyer.html">Mine hobbyer</a><a
+                    href="kontakt.html">Kontakt</a><a href="planlegger.html" aria-current="page">Min planlegger</a><a
+                    href="galleri.html">Mitt galleri</a></nav>
+        </div>
+    </header>
+    <main class="wrap">
+        <section class="page-intro"><span class="eyebrow">HOLD OVERSIKT</span>
+            <h1>Min planlegger</h1>
+            <p>Planlegg skole, fritid og andre gjøremål. Klikk på en oppgave for å markere den som ferdig.</p>
+        </section>
+        <section class="panel">
+            <h2>Legg til oppgave</h2>
+            <div class="form-row">
+                <div class="field grow"><label for="oppgave">Ny oppgave</label><input id="oppgave" type="text"
+                        placeholder="For eksempel: Øve til prøve"></div>
+                <div class="field category-field"><label for="kategori">Kategori</label><select id="kategori">
+                        <option value="Skole">Skole</option>
+                        <option value="Fritid">Fritid</option>
+                        <option value="Annet">Annet</option>
+                    </select></div><button type="button" id="leggTil" class="align-bottom">Legg til</button>
+            </div>
+            <p id="statusFelt" class="message" role="status" aria-live="polite"></p>
+        </section>
+        <section class="stats" aria-label="Oversikt">
+            <div><strong id="totalt">0</strong><span>Totalt</span></div>
+            <div><strong id="ferdige">0</strong><span>Ferdige</span></div>
+            <div><strong id="gjenstar">0</strong><span>Gjenstår</span></div>
+        </section>
+        <section class="panel">
+            <h2>Mine oppgaver</h2>
+            <ul id="oppgaveliste" class="task-list"></ul>
+            <p id="tomListe" class="muted">Ingen oppgaver ennå. Legg til din første oppgave!</p>
+        </section>
+    </main>
+    <footer>
+        <div class="wrap">Sluttprosjekt VG1 IM · HTML, CSS og JavaScript</div>
+    </footer>
+</body>
+
+</html>

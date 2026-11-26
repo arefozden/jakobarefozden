@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="no">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Undersøk verdier med console.log</title>
+  <link rel="stylesheet" href="kurs.css">
+</head>
+
+<body>
+  <header>
+    <h1>Uke 46 · Testing og feilsøking</h1>
+    <p>Minikurs med HTML, CSS og JavaScript</p>
+  </header>
+  <main><a class="back" href="index.html">← Tilbake til oversikten</a><span class="tag">Tema 3 av 6</span>
+    <h2>Undersøk verdier med console.log</h2>
+    <p class="lead">Input er tekst, ikke tall</p>
+    <div class="panel"><strong>Oppgave:</strong> Skriv 5 og se forskjellen mellom 55 og
+      10.<br><strong>Diskuter:</strong> Hva gjør Number() med inputverdien?</div>
+    <h2 style="margin-top:26px">Prøv begge versjonene</h2>
+    <div class="pair">
+      <section class="panel">
+        <h2>1 · Feil versjon</h2><a class="btn " href="03_console_log/index_feil.html" target="_blank"
+          rel="noopener">Åpne i ny fane</a><iframe class="preview" src="03_console_log/index_feil.html"
+          title="1 · Feil versjon" loading="lazy"></iframe>
+        <p><small>For Console og mobiltest: Åpne i ny fane og trykk F12.</small></p>
+        <details>
+          <summary>Vis index_feil.html</summary>
+          <pre
+            class="code"><code>&lt;!DOCTYPE html&gt;&lt;html lang=&quot;no&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;&lt;title&gt;Undersøk verdier med console.log&lt;/title&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;Undersøk verdier med console.log&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Oppgave:&lt;/strong&gt; Skriv et tall. Se forskjellen mellom verdien i Console og resultatet på siden.&lt;/p&gt;&lt;label for=&quot;tall&quot;&gt;Skriv et tall:&lt;/label&gt;&lt;input id=&quot;tall&quot; type=&quot;number&quot;&gt;&lt;button id=&quot;doble&quot;&gt;Doble tallet&lt;/button&gt;&lt;p id=&quot;resultat&quot;&gt;Resultatet kommer her.&lt;/p&gt;&lt;script src=&quot;script_feil.js&quot; defer&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+        </details>
+        <details>
+          <summary>Vis script_feil.js</summary>
+          <pre class="code"><code>const felt = document.querySelector(&quot;#tall&quot;);
+const knapp = document.querySelector(&quot;#doble&quot;);
+knapp.addEventListener(&quot;click&quot;, function () {
+  const verdi = felt.value;
+  console.log(&quot;Input som tekst:&quot;, verdi, typeof verdi);
+  // FEIL: + gir tekstsammenslåing når verdi er tekst.
+  const resultat = verdi + verdi;
+  console.log(&quot;Resultat:&quot;, resultat);
+  document.querySelector(&quot;#resultat&quot;).textContent = &quot;Dobbelt: &quot; + resultat;
+});
+</code></pre>
+        </details>
+        <details>
+          <summary>Vis style.css</summary>
+          <pre class="code"><code>* {box-sizing:border-box} body {font-family:Arial,sans-serif;max-width:900px;margin:35px auto;padding:18px;line-height:1.5} h1 {color:#17365d} a:focus-visible,button:focus-visible {outline:3px solid orange;outline-offset:3px}
+input,button {padding:10px;margin:6px} button {background:#2563eb;color:white;border:0;border-radius:6px}
+</code></pre>
+        </details>
+      </section>
+      <section class="panel">
+        <h2>2 · Rettet versjon</h2><a class="btn good" href="03_console_log/index_riktig.html" target="_blank"
+          rel="noopener">Åpne i ny fane</a><iframe class="preview" src="03_console_log/index_riktig.html"
+          title="2 · Rettet versjon" loading="lazy"></iframe>
+        <p><small>For Console og mobiltest: Åpne i ny fane og trykk F12.</small></p>
+        <details>
+          <summary>Vis index_riktig.html</summary>
+          <pre
+            class="code"><code>&lt;!DOCTYPE html&gt;&lt;html lang=&quot;no&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;&lt;title&gt;Undersøk verdier med console.log&lt;/title&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;Undersøk verdier med console.log&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Oppgave:&lt;/strong&gt; Skriv et tall. Se forskjellen mellom verdien i Console og resultatet på siden.&lt;/p&gt;&lt;label for=&quot;tall&quot;&gt;Skriv et tall:&lt;/label&gt;&lt;input id=&quot;tall&quot; type=&quot;number&quot;&gt;&lt;button id=&quot;doble&quot;&gt;Doble tallet&lt;/button&gt;&lt;p id=&quot;resultat&quot;&gt;Resultatet kommer her.&lt;/p&gt;&lt;script src=&quot;script_riktig.js&quot; defer&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+        </details>
+        <details>
+          <summary>Vis script_riktig.js</summary>
+          <pre class="code"><code>const felt = document.querySelector(&quot;#tall&quot;);
+const knapp = document.querySelector(&quot;#doble&quot;);
+knapp.addEventListener(&quot;click&quot;, function () {
+  const verdi = Number(felt.value);
+  console.log(&quot;Input som tall:&quot;, verdi, typeof verdi);
+  const resultat = verdi * 2;
+  console.log(&quot;Resultat:&quot;, resultat);
+  document.querySelector(&quot;#resultat&quot;).textContent = &quot;Dobbelt: &quot; + resultat;
+});
+</code></pre>
+        </details>
+        <details>
+          <summary>Vis style.css</summary>
+          <pre class="code"><code>* {box-sizing:border-box} body {font-family:Arial,sans-serif;max-width:900px;margin:35px auto;padding:18px;line-height:1.5} h1 {color:#17365d} a:focus-visible,button:focus-visible {outline:3px solid orange;outline-offset:3px}
+input,button {padding:10px;margin:6px} button {background:#2563eb;color:white;border:0;border-radius:6px}
+</code></pre>
+        </details>
+      </section>
+    </div>
+    <div class="panel" style="margin-top:20px">
+      <h2>Mini-testlogg</h2>
+      <p>Hva testet du? Hva skjedde i feilversjonen? Hva ble rettet? Test én gang til.</p>
+    </div>
+    <p><a class="btn secondary" href="index.html">Alle temaer</a><a class="btn" href="tema_04.html">Neste tema →</a></p>
+  </main>
+  <footer>VG1 · Konseptutvikling og programmering</footer>
+</body>
+
+</html>

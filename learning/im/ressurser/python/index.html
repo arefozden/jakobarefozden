@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Python-ressurser | IM Portal</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <div id="site-header"></div>
+
+    <main id="top">
+
+        <!-- BREADCRUMB -->
+
+        <div class="breadcrumb">
+            <a href="../../index.html">IM Portal</a>
+            <span>›</span>
+
+            <a href="../index.html">Ressurser</a>
+            <span>›</span>
+
+            <span>Python</span>
+        </div>
+
+
+        <!-- INTRO -->
+
+        <section class="page-intro">
+
+            <p class="eyebrow">
+                Kodebibliotek
+            </p>
+
+            <h1>Python</h1>
+
+            <p>
+                Hurtigoversikt over grunnleggende Python:
+                variabler, input, valg, løkker, lister,
+                funksjoner og enkel feilsøking.
+            </p>
+
+        </section>
+
+
+        <!-- INNHOLDSMENY -->
+
+        <nav class="page-toc" aria-label="Innhold på siden">
+
+            <strong>På denne siden</strong>
+
+            <div class="page-toc-links">
+
+                <a href="#grunnleggende">
+                    Grunnleggende
+                </a>
+
+                <a href="#input">
+                    Input
+                </a>
+
+                <a href="#valg">
+                    If / else
+                </a>
+
+                <a href="#lokker">
+                    Løkker
+                </a>
+
+                <a href="#lister">
+                    Lister
+                </a>
+
+                <a href="#funksjoner">
+                    Funksjoner
+                </a>
+
+                <a href="#feilsoking">
+                    Feilsøking
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- =========================
+             GRUNNLEGGENDE
+        ========================== -->
+
+        <section id="grunnleggende">
+
+            <h2>print()</h2>
+
+            <p>
+                <code>print()</code> brukes til å skrive
+                tekst eller verdier til terminalen.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>print("Hei verden!")</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Variabler</h2>
+
+            <p>
+                Variabler brukes til å lagre informasjon
+                som programmet kan bruke senere.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>navn = "Sara"
+alder = 16
+
+print(navn)
+print(alder)</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Datatyper</h2>
+
+            <p>
+                Python kan arbeide med forskjellige typer data,
+                for eksempel tekst, heltall, desimaltall
+                og true/false-verdier.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>navn = "Sara"       # str
+
+alder = 16          # int
+
+hoyde = 1.72        # float
+
+elev = True         # bool</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Regneoperatorer</h2>
+
+            <div class="code-box">
+
+<pre><code>a = 10
+b = 5
+
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             INPUT
+        ========================== -->
+
+        <section id="input">
+
+            <h2>input()</h2>
+
+            <p>
+                <code>input()</code> brukes når programmet
+                skal hente informasjon fra brukeren.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>navn = input("Hva heter du? ")
+
+print("Hei " + navn)</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Input med tall</h2>
+
+            <p>
+                Verdien fra <code>input()</code> er tekst.
+                Hvis vi trenger et heltall, kan vi bruke
+                <code>int()</code>.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>alder = int(
+    input("Hvor gammel er du? ")
+)
+
+print(alder)</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             VALG
+        ========================== -->
+
+        <section id="valg">
+
+            <h2>if</h2>
+
+            <p>
+                <code>if</code> brukes når programmet
+                skal gjøre noe dersom en betingelse er sann.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>alder = 18
+
+if alder >= 18:
+    print("Du er myndig.")</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>if / else</h2>
+
+            <div class="code-box">
+
+<pre><code>alder = 16
+
+if alder >= 18:
+    print("Du er myndig.")
+else:
+    print("Du er under 18 år.")</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>if / elif / else</h2>
+
+            <p>
+                <code>elif</code> kan brukes når programmet
+                skal kontrollere flere muligheter.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>poeng = 75
+
+if poeng >= 90:
+    print("Svært bra")
+elif poeng >= 60:
+    print("Bra")
+else:
+    print("Prøv igjen")</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             LØKKER
+        ========================== -->
+
+        <section id="lokker">
+
+            <h2>for-løkke</h2>
+
+            <p>
+                En <code>for</code>-løkke brukes når
+                kode skal gjentas flere ganger.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>for tall in range(5):
+    print(tall)</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>range()</h2>
+
+            <p>
+                <code>range()</code> kan brukes til
+                å lage en serie med tall.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>for tall in range(1, 6):
+    print(tall)</code></pre>
+
+            </div>
+
+            <p>
+                Dette skriver ut tallene fra 1 til 5.
+            </p>
+
+        </section>
+
+
+        <section>
+
+            <h2>while-løkke</h2>
+
+            <p>
+                En <code>while</code>-løkke fortsetter
+                så lenge en betingelse er sann.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>tall = 1
+
+while tall <= 5:
+    print(tall)
+    tall = tall + 1</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             LISTER
+        ========================== -->
+
+        <section id="lister">
+
+            <h2>Lister</h2>
+
+            <p>
+                En liste kan lagre flere verdier
+                i én variabel.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>fag = [
+    "HTML",
+    "CSS",
+    "Python"
+]
+
+print(fag)</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Hente fra en liste</h2>
+
+            <p>
+                Det første elementet i en liste
+                har indeks <code>0</code>.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>fag = [
+    "HTML",
+    "CSS",
+    "Python"
+]
+
+print(fag[0])</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Legge til i en liste</h2>
+
+            <p>
+                <code>append()</code> legger til et nytt
+                element på slutten av listen.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>fag = [
+    "HTML",
+    "CSS"
+]
+
+fag.append("Python")
+
+print(fag)</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Løkke gjennom en liste</h2>
+
+            <div class="code-box">
+
+<pre><code>fag = [
+    "HTML",
+    "CSS",
+    "Python"
+]
+
+for fag_navn in fag:
+    print(fag_navn)</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             FUNKSJONER
+        ========================== -->
+
+        <section id="funksjoner">
+
+            <h2>Funksjoner</h2>
+
+            <p>
+                En funksjon samler kode som kan
+                brukes flere ganger.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>def si_hei():
+    print("Hei!")
+
+si_hei()</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Funksjon med parameter</h2>
+
+            <p>
+                En parameter gjør det mulig å sende
+                informasjon inn i funksjonen.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>def si_hei(navn):
+    print("Hei " + navn)
+
+si_hei("Sara")</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>return</h2>
+
+            <p>
+                <code>return</code> brukes når en funksjon
+                skal sende en verdi tilbake.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>def legg_sammen(a, b):
+    return a + b
+
+resultat = legg_sammen(5, 3)
+
+print(resultat)</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             FEILSØKING
+        ========================== -->
+
+        <section id="feilsoking">
+
+            <h2>Enkel feilsøking</h2>
+
+            <p>
+                Når Python-koden ikke fungerer,
+                bør du lese feilmeldingen i terminalen.
+                Den forteller ofte hvilken linje problemet finnes på.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>print("Programmet starter")
+
+navn = "Sara"
+
+print(navn)</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Vanlige feil</h2>
+
+            <ul>
+                <li>Feil innrykk i koden.</li>
+                <li>Manglende kolon etter <code>if</code>, <code>for</code> eller <code>def</code>.</li>
+                <li>Variabelnavnet er skrevet feil.</li>
+                <li>Tekst mangler anførselstegn.</li>
+                <li>Du prøver å regne med tekst i stedet for tall.</li>
+            </ul>
+
+        </section>
+
+
+        <section>
+
+            <h2>Bruk print() når du tester</h2>
+
+            <p>
+                <code>print()</code> kan brukes underveis
+                for å kontrollere hvilke verdier programmet har.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>alder = 16
+
+print("Alder før if:", alder)
+
+if alder >= 18:
+    print("Myndig")
+else:
+    print("Ikke myndig")</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <div id="site-footer"></div>
+
+
+    <script src="../../js/main.js"></script>
+
+</body>
+
+</html>

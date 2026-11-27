@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Kontakt</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Kontakt</h1>
+        </header>
+        <main>
+            <section>
+                <h2>Kontaktformular</h2>
+                <form>
+                    <label for="name">Navn:</label>
+                    <input type="text" id="name" name="name" required placeholder="Ditt navn"><br><br>
+
+                    <label for="email">E-Mail:</label>
+                    <input type="email" id="email" name="email" required placeholder="Din e-post"
+                    ><br><br>
+
+                    <label for="phone">Telefon:</label>
+                    <input type="number" id="phone" name="phone" required placeholder="Din telefonnummer"><br><br>
+
+                    <label for="message">Melding:</label><br>
+                    <textarea id="message" name="message" rows="5" required placeholder="Din melding"></textarea><br><br>
+
+                    <button type="submit">Send</button>
+
+                </form>
+            </section>
+            <section>
+                <p>Velg favoritt:</p>
+
+<input type="radio" id="pc" name="plattform">
+<label for="pc">PC</label>
+
+<input type="radio" id="playstation" name="plattform">
+<label for="playstation">PlayStation</label>
+
+<input type="radio" id="xbox" name="plattform">
+<label for="xbox">Xbox</label>
+
+            </section>
+            <section>
+                <p>Hva liker du?</p>
+
+                <input type="checkbox" id="gaming">
+<label for="gaming">Gaming</label>
+
+<input type="checkbox" id="musikk">
+<label for="musikk">Musikk</label>
+
+<input type="checkbox" id="sport">
+<label for="sport">Sport</label>
+
+            </section>
+        </main>
+    </body>
+</html>

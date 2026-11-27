@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kontakt | Min nettside</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/kontakt.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrap header-inner"><a class="brand" href="index.html">Min nettside<span
+                    class="brand-dot">.</span></a>
+            <nav aria-label="Hovedmeny"><a href="index.html">Hjem</a><a href="hobbyer.html">Mine hobbyer</a><a
+                    href="kontakt.html" aria-current="page">Kontakt</a><a href="planlegger.html">Min planlegger</a><a
+                    href="galleri.html">Mitt galleri</a></nav>
+        </div>
+    </header>
+    <main class="wrap">
+        <section class="page-intro"><span class="eyebrow">TA KONTAKT</span>
+            <h1>Kontakt</h1>
+            <p>Dette er et demonstrasjonsskjema. Ingen melding sendes eller lagres.</p>
+        </section>
+        <section class="panel narrow">
+            <div class="field"><label for="navn">Navn</label><input id="navn" type="text" placeholder="Ditt navn"></div>
+            <div class="field"><label for="epost">E-post</label><input id="epost" type="email"
+                    placeholder="navn@eksempel.no"></div>
+            <div class="field"><label for="melding">Melding</label><textarea id="melding" rows="5"
+                    placeholder="Skriv meldingen din"></textarea></div><button type="button" id="sendMelding">Send
+                melding</button>
+            <p id="kontaktStatus" class="message" role="status" aria-live="polite"></p>
+        </section>
+    </main>
+    <footer>
+        <div class="wrap">Sluttprosjekt VG1 IM · HTML, CSS og JavaScript</div>
+    </footer>
+</body>
+
+</html>

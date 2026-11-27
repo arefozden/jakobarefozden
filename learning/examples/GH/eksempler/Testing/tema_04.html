@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="no">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Feil CSS-klassenavn</title>
+  <link rel="stylesheet" href="kurs.css">
+</head>
+
+<body>
+  <header>
+    <h1>Uke 46 · Testing og feilsøking</h1>
+    <p>Minikurs med HTML, CSS og JavaScript</p>
+  </header>
+  <main><a class="back" href="index.html">← Tilbake til oversikten</a><span class="tag">Tema 4 av 6</span>
+    <h2>Feil CSS-klassenavn</h2>
+    <p class="lead">Knappen reagerer, men utseendet endres ikke</p>
+    <div class="panel"><strong>Oppgave:</strong> Sammenlign klassenavnet i CSS og
+      classList.toggle().<br><strong>Diskuter:</strong> Hvorfor vises ingen rød feil i Console?</div>
+    <h2 style="margin-top:26px">Prøv begge versjonene</h2>
+    <div class="pair">
+      <section class="panel">
+        <h2>1 · Feil versjon</h2><a class="btn " href="04_css_klasse/index_feil.html" target="_blank"
+          rel="noopener">Åpne i ny fane</a><iframe class="preview" src="04_css_klasse/index_feil.html"
+          title="1 · Feil versjon" loading="lazy"></iframe>
+        <p><small>For Console og mobiltest: Åpne i ny fane og trykk F12.</small></p>
+        <details>
+          <summary>Vis index_feil.html</summary>
+          <pre
+            class="code"><code>&lt;!DOCTYPE html&gt;&lt;html lang=&quot;no&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;&lt;title&gt;Feil klassenavn&lt;/title&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;Feil klassenavn&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Oppgave:&lt;/strong&gt; Knappen virker, men bakgrunnen endres ikke. Sammenlign klassenavnet i CSS og JavaScript.&lt;/p&gt;&lt;button id=&quot;tema&quot;&gt;Bytt bakgrunn&lt;/button&gt;&lt;p&gt;Her skal bakgrunnen endre seg.&lt;/p&gt;&lt;script src=&quot;script_feil.js&quot; defer&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+        </details>
+        <details>
+          <summary>Vis script_feil.js</summary>
+          <pre class="code"><code>const knapp = document.querySelector(&quot;#tema&quot;);
+knapp.addEventListener(&quot;click&quot;, function () {
+  // FEIL: CSS bruker mork, JavaScript bruker mørk.
+  document.body.classList.toggle(&quot;mørk&quot;);
+  console.log(&quot;Body-klasser:&quot;, document.body.className);
+});
+</code></pre>
+        </details>
+        <details>
+          <summary>Vis style.css</summary>
+          <pre class="code"><code>* {box-sizing:border-box} body {font-family:Arial,sans-serif;max-width:900px;margin:35px auto;padding:18px;line-height:1.5} h1 {color:#17365d} a:focus-visible,button:focus-visible {outline:3px solid orange;outline-offset:3px}
+button {padding:12px;border:0;border-radius:8px;background:#2563eb;color:white} body.mork {background:#222;color:white}
+</code></pre>
+        </details>
+      </section>
+      <section class="panel">
+        <h2>2 · Rettet versjon</h2><a class="btn good" href="04_css_klasse/index_riktig.html" target="_blank"
+          rel="noopener">Åpne i ny fane</a><iframe class="preview" src="04_css_klasse/index_riktig.html"
+          title="2 · Rettet versjon" loading="lazy"></iframe>
+        <p><small>For Console og mobiltest: Åpne i ny fane og trykk F12.</small></p>
+        <details>
+          <summary>Vis index_riktig.html</summary>
+          <pre
+            class="code"><code>&lt;!DOCTYPE html&gt;&lt;html lang=&quot;no&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;&lt;title&gt;Feil klassenavn&lt;/title&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;Feil klassenavn&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Oppgave:&lt;/strong&gt; Knappen virker, men bakgrunnen endres ikke. Sammenlign klassenavnet i CSS og JavaScript.&lt;/p&gt;&lt;button id=&quot;tema&quot;&gt;Bytt bakgrunn&lt;/button&gt;&lt;p&gt;Her skal bakgrunnen endre seg.&lt;/p&gt;&lt;script src=&quot;script_riktig.js&quot; defer&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+        </details>
+        <details>
+          <summary>Vis script_riktig.js</summary>
+          <pre class="code"><code>const knapp = document.querySelector(&quot;#tema&quot;);
+knapp.addEventListener(&quot;click&quot;, function () {
+  document.body.classList.toggle(&quot;mork&quot;);
+  console.log(&quot;Body-klasser:&quot;, document.body.className);
+});
+</code></pre>
+        </details>
+        <details>
+          <summary>Vis style.css</summary>
+          <pre class="code"><code>* {box-sizing:border-box} body {font-family:Arial,sans-serif;max-width:900px;margin:35px auto;padding:18px;line-height:1.5} h1 {color:#17365d} a:focus-visible,button:focus-visible {outline:3px solid orange;outline-offset:3px}
+button {padding:12px;border:0;border-radius:8px;background:#2563eb;color:white} body.mork {background:#222;color:white}
+</code></pre>
+        </details>
+      </section>
+    </div>
+    <div class="panel" style="margin-top:20px">
+      <h2>Mini-testlogg</h2>
+      <p>Hva testet du? Hva skjedde i feilversjonen? Hva ble rettet? Test én gang til.</p>
+    </div>
+    <p><a class="btn secondary" href="index.html">Alle temaer</a><a class="btn" href="tema_05.html">Neste tema →</a></p>
+  </main>
+  <footer>VG1 · Konseptutvikling og programmering</footer>
+</body>
+
+</html>

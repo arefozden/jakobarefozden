@@ -1,0 +1,4 @@
+* {box-sizing:border-box} body {font-family:Arial,sans-serif;max-width:900px;margin:35px auto;padding:18px;line-height:1.5} h1 {color:#17365d} a:focus-visible,button:focus-visible {outline:3px solid orange;outline-offset:3px}
+nav a {margin-right:18px} .kort-container {display:flex;gap:16px;width:850px} .kort {background:#e0ecff;padding:18px;flex:1;border-radius:10px} button {padding:12px;background:#2563eb;color:white;border:0;border-radius:8px} footer {margin-top:24px}
+
+@media(max-width:600px){.kort-container{width:100%;flex-direction:column}nav a{display:inline-block;padding:8px}}

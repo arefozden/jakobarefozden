@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript-ressurser | IM Portal</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <div id="site-header"></div>
+
+    <main id="top">
+
+        <!-- BREADCRUMB -->
+
+        <div class="breadcrumb">
+            <a href="../../index.html">IM Portal</a>
+            <span>›</span>
+
+            <a href="../index.html">Ressurser</a>
+            <span>›</span>
+
+            <span>JavaScript</span>
+        </div>
+
+
+        <!-- INTRO -->
+
+        <section class="page-intro">
+
+            <p class="eyebrow">
+                Kodebibliotek
+            </p>
+
+            <h1>JavaScript</h1>
+
+            <p>
+                Hurtigoversikt over vanlige JavaScript-kommandoer,
+                variabler, funksjoner, løkker og interaksjon med HTML.
+            </p>
+
+        </section>
+
+
+        <!-- INNHOLDSMENY -->
+
+        <nav class="page-toc" aria-label="Innhold på siden">
+
+            <strong>På denne siden</strong>
+
+            <div class="page-toc-links">
+
+                <a href="#grunnleggende">
+                    Grunnleggende
+                </a>
+
+                <a href="#valg">
+                    If / else
+                </a>
+
+                <a href="#funksjoner">
+                    Funksjoner
+                </a>
+
+                <a href="#arrays">
+                    Arrays
+                </a>
+
+                <a href="#lokker">
+                    Løkker
+                </a>
+
+                <a href="#dom">
+                    DOM
+                </a>
+
+                <a href="#events">
+                    Events
+                </a>
+
+                <a href="#debugging">
+                    Debugging
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- =========================
+             GRUNNLEGGENDE
+        ========================== -->
+
+        <section id="grunnleggende">
+
+            <h2>Koble JavaScript til HTML</h2>
+
+            <p>
+                En ekstern JavaScript-fil kan kobles til HTML-siden
+                rett før <code>&lt;/body&gt;</code>.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>console.log()</h2>
+
+            <p>
+                Bruk <code>console.log()</code> for å skrive informasjon
+                til konsollen. Dette er nyttig når du tester og
+                feilsøker kode.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>console.log("Hei verden!");
+
+let navn = "Ola";
+
+console.log(navn);</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>let og const</h2>
+
+            <p>
+                Variabler brukes til å lagre informasjon.
+                <code>let</code> brukes når verdien kan endres,
+                mens <code>const</code> brukes når variabelen
+                ikke skal tilordnes en ny verdi.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>let alder = 16;
+
+const skole = "Mailand vgs";
+
+alder = 17;</code></pre>
+
+            </div>
+
+        </section>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+        <section>
+
+            <h2>Datatyper</h2>
+
+            <p>
+                JavaScript kan lagre forskjellige typer data,
+                for eksempel tekst, tall og true/false-verdier.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>let navn = "Sara";       // String
+
+let alder = 16;          // Number
+
+let elev = true;         // Boolean
+
+let ingenting = null;    // Null</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Operatorer</h2>
+
+            <p>
+                Operatorer kan blant annet brukes til
+                matematiske beregninger.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>let a = 10;
+let b = 5;
+
+console.log(a + b);
+console.log(a - b);
+console.log(a * b);
+console.log(a / b);</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Sammenligning</h2>
+
+            <p>
+                Sammenligninger gir resultatet
+                <code>true</code> eller <code>false</code>.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>let alder = 18;
+
+console.log(alder === 18);
+console.log(alder > 15);
+console.log(alder < 20);</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             VALG
+        ========================== -->
+
+        <section id="valg">
+
+            <h2>if / else</h2>
+
+            <p>
+                Med <code>if</code> og <code>else</code>
+                kan programmet ta valg basert på en betingelse.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>let alder = 18;
+
+if (alder >= 18) {
+    console.log("Du er myndig.");
+} else {
+    console.log("Du er under 18 år.");
+}</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             FUNKSJONER
+        ========================== -->
+
+        <section id="funksjoner">
+
+            <h2>Funksjoner</h2>
+
+            <p>
+                En funksjon samler kode som kan brukes flere ganger.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>function siHei() {
+    console.log("Hei!");
+}
+
+siHei();</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Funksjon med parameter</h2>
+
+            <p>
+                Parametere gjør det mulig å sende informasjon
+                inn i en funksjon.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>function siHei(navn) {
+    console.log("Hei " + navn);
+}
+
+siHei("Sara");</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             ARRAYS
+        ========================== -->
+
+        <section id="arrays">
+
+            <h2>Arrays</h2>
+
+            <p>
+                Et array kan lagre flere verdier
+                i én variabel.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>const fag = [
+    "HTML",
+    "CSS",
+    "JavaScript"
+];
+
+console.log(fag[0]);</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             LØKKER
+        ========================== -->
+
+        <section id="lokker">
+
+            <h2>for-løkke</h2>
+
+            <p>
+                En løkke brukes når kode skal
+                gjentas flere ganger.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>for (let i = 0; i < 5; i++) {
+    console.log(i);
+}</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>forEach()</h2>
+
+            <p>
+                <code>forEach()</code> kan brukes til å gå
+                gjennom alle elementene i et array.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>const fag = [
+    "HTML",
+    "CSS",
+    "JavaScript"
+];
+
+fag.forEach(fagNavn => {
+    console.log(fagNavn);
+});</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             DOM
+        ========================== -->
+
+        <section id="dom">
+
+            <h2>DOM</h2>
+
+            <p>
+                DOM gjør det mulig for JavaScript
+                å finne og endre innhold på en nettside.
+            </p>
+
+        </section>
+
+
+        <section>
+
+            <h2>getElementById()</h2>
+
+            <p>
+                <code>getElementById()</code> finner et
+                HTML-element ved hjelp av elementets ID.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>const overskrift =
+    document.getElementById("overskrift");
+
+overskrift.textContent =
+    "Ny overskrift";</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>querySelector()</h2>
+
+            <p>
+                <code>querySelector()</code> kan finne et element
+                ved hjelp av en CSS-selector.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>const knapp =
+    document.querySelector(".button");</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             EVENTS
+        ========================== -->
+
+        <section id="events">
+
+            <h2>Events</h2>
+
+            <p>
+                JavaScript kan reagere på det brukeren gjør,
+                for eksempel når brukeren klikker på en knapp.
+            </p>
+
+        </section>
+
+
+        <section>
+
+            <h2>addEventListener()</h2>
+
+            <p>
+                En event listener venter på en bestemt hendelse
+                og kjører kode når hendelsen skjer.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>const knapp =
+    document.querySelector("#min-knapp");
+
+knapp.addEventListener("click", () => {
+    console.log("Knappen ble klikket!");
+});</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Endre CSS med JavaScript</h2>
+
+            <p>
+                JavaScript kan legge til eller fjerne
+                CSS-klasser på HTML-elementer.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>const boks =
+    document.querySelector(".boks");
+
+boks.classList.add("active");</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             DEBUGGING
+        ========================== -->
+
+        <section id="debugging">
+
+            <h2>Enkel debugging</h2>
+
+            <p>
+                Hvis JavaScript ikke fungerer, kan du starte med
+                å åpne utviklerverktøyene i nettleseren og se
+                etter feilmeldinger i Console.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>console.log("Programmet starter");
+
+console.log(verdi);</code></pre>
+
+            </div>
+
+            <p>
+                Bruk <code>console.log()</code> underveis for å
+                kontrollere hvilke verdier programmet arbeider med.
+            </p>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <div id="site-footer"></div>
+
+
+    <script src="../../js/main.js"></script>
+
+</body>
+
+</html>

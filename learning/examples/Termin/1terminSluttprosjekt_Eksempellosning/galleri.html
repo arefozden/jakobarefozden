@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mitt galleri | Min nettside</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/galleri.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrap header-inner"><a class="brand" href="index.html">Min nettside<span
+                    class="brand-dot">.</span></a>
+            <nav aria-label="Hovedmeny"><a href="index.html">Hjem</a><a href="hobbyer.html">Mine hobbyer</a><a
+                    href="kontakt.html">Kontakt</a><a href="planlegger.html">Min planlegger</a><a href="galleri.html"
+                    aria-current="page">Mitt galleri</a></nav>
+        </div>
+    </header>
+    <main class="wrap">
+        <section class="page-intro"><span class="eyebrow">BILDER OG KATEGORIER</span>
+            <h1>Mitt galleri</h1>
+            <p>Seks illustrasjoner fordelt på Natur og By. Bruk knappene for å filtrere.</p>
+        </section>
+        <div class="filters" aria-label="Filtrer bilder"><button type="button" class="filter active" data-filter="Alle"
+                aria-pressed="true">Alle</button><button type="button" class="filter" data-filter="Natur"
+                aria-pressed="false">Natur</button><button type="button" class="filter" data-filter="By"
+                aria-pressed="false">By</button></div>
+        <div class="gallery">
+            <figure class="gallery-card" data-category="Natur"><img src="images/fjell.svg"
+                    alt="Illustrasjon av fjell og sol">
+                <figcaption><strong>Fjell</strong><span>Natur · Rolige fjelltopper</span></figcaption>
+            </figure>
+            <figure class="gallery-card" data-category="By"><img src="images/by.svg"
+                    alt="Illustrasjon av bygninger i en by">
+                <figcaption><strong>Byliv</strong><span>By · Hus og gater</span></figcaption>
+            </figure>
+            <figure class="gallery-card" data-category="Natur"><img src="images/skog.svg"
+                    alt="Illustrasjon av trær i en skog">
+                <figcaption><strong>Skog</strong><span>Natur · Grønne trær</span></figcaption>
+            </figure>
+            <figure class="gallery-card" data-category="By"><img src="images/bro.svg"
+                    alt="Illustrasjon av en bro over vann">
+                <figcaption><strong>Bro</strong><span>By · En tur over elven</span></figcaption>
+            </figure>
+            <figure class="gallery-card" data-category="Natur"><img src="images/sjo.svg"
+                    alt="Illustrasjon av innsjø og solnedgang">
+                <figcaption><strong>Innsjø</strong><span>Natur · Vann og himmel</span></figcaption>
+            </figure>
+            <figure class="gallery-card" data-category="By"><img src="images/hus.svg"
+                    alt="Illustrasjon av fargerike hus">
+                <figcaption><strong>Hus</strong><span>By · Fargerike fasader</span></figcaption>
+            </figure>
+        </div>
+        <p id="galleriStatus" class="muted" role="status" aria-live="polite">Viser 6 bilder.</p>
+    </main>
+    <footer>
+        <div class="wrap">Sluttprosjekt VG1 IM · HTML, CSS og JavaScript</div>
+    </footer>
+</body>
+
+</html>

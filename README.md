@@ -1,4 +1,4 @@
-# Jakob Aref Øzden — Personal Website
+## Jakob Aref Øzden — Personal Website
 
 Static personal website using HTML, CSS and JavaScript.
 

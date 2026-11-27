@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS-ressurser | IM Portal</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <div id="site-header"></div>
+
+    <main id="top">
+
+        <!-- BREADCRUMB -->
+
+        <div class="breadcrumb">
+            <a href="../../index.html">IM Portal</a>
+            <span>›</span>
+
+            <a href="../index.html">Ressurser</a>
+            <span>›</span>
+
+            <span>CSS</span>
+        </div>
+
+
+        <!-- INTRO -->
+
+        <section class="page-intro">
+
+            <p class="eyebrow">
+                Kodebibliotek
+            </p>
+
+            <h1>CSS</h1>
+
+            <p>
+                Hurtigoversikt over vanlige CSS-egenskaper,
+                selectors, box model, Flexbox, Grid og
+                responsive design.
+            </p>
+
+        </section>
+
+
+        <!-- INNHOLDSMENY -->
+
+        <nav class="page-toc" aria-label="Innhold på siden">
+
+            <strong>På denne siden</strong>
+
+            <div class="page-toc-links">
+
+                <a href="#grunnleggende">
+                    Grunnleggende
+                </a>
+
+                <a href="#selectors">
+                    Selectors
+                </a>
+
+                <a href="#farger-tekst">
+                    Farger og tekst
+                </a>
+
+                <a href="#box-model">
+                    Box model
+                </a>
+
+                <a href="#flexbox">
+                    Flexbox
+                </a>
+
+                <a href="#grid">
+                    Grid
+                </a>
+
+                <a href="#responsive">
+                    Responsive design
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- =========================
+             GRUNNLEGGENDE
+        ========================== -->
+
+        <section id="grunnleggende">
+
+            <h2>Koble CSS til HTML</h2>
+
+            <p>
+                En ekstern CSS-fil kobles vanligvis til
+                HTML-dokumentet inne i <code>&lt;head&gt;</code>.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>En enkel CSS-regel</h2>
+
+            <p>
+                En CSS-regel består vanligvis av en selector,
+                en egenskap og en verdi.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>p {
+    color: blue;
+    font-size: 18px;
+}</code></pre>
+
+            </div>
+
+            <p>
+                Her velger <code>p</code> alle avsnitt,
+                mens <code>color</code> og <code>font-size</code>
+                bestemmer hvordan teksten skal se ut.
+            </p>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             SELECTORS
+        ========================== -->
+
+        <section id="selectors">
+
+            <h2>Element selector</h2>
+
+            <p>
+                En element selector velger alle HTML-elementer
+                av en bestemt type.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>h1 {
+    color: blue;
+}</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Class selector</h2>
+
+            <p>
+                En class kan brukes på flere HTML-elementer.
+                I CSS skrives class-navnet med punktum foran.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>.card {
+    padding: 20px;
+    border: 1px solid #ddd;
+}</code></pre>
+
+            </div>
+
+            <p>
+                I HTML kan klassen brukes slik:
+            </p>
+
+            <div class="code-box">
+
+<pre><code>&lt;div class="card"&gt;
+    Innhold
+&lt;/div&gt;</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>ID selector</h2>
+
+            <p>
+                En ID skal normalt være unik på siden.
+                I CSS bruker vi <code>#</code> foran ID-navnet.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>#overskrift {
+    color: red;
+}</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Hover</h2>
+
+            <p>
+                <code>:hover</code> kan brukes når et element
+                skal endre utseende når musepekeren er over det.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>a:hover {
+    color: blue;
+}</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             FARGER OG TEKST
+        ========================== -->
+
+        <section id="farger-tekst">
+
+            <h2>Farger</h2>
+
+            <p>
+                Farger kan blant annet skrives som navn,
+                HEX-verdier eller RGB-verdier.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>h1 {
+    color: #2563eb;
+}
+
+body {
+    background-color: #f5f7fb;
+}</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Tekst</h2>
+
+            <p>
+                CSS kan styre blant annet skrifttype,
+                størrelse, tykkelse og linjeavstand.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>p {
+    font-family: Arial, sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 400;
+
+    line-height: 1.7;
+}</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Tekstjustering</h2>
+
+            <div class="code-box">
+
+<pre><code>h1 {
+    text-align: center;
+}</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             BOX MODEL
+        ========================== -->
+
+        <section id="box-model">
+
+            <h2>Box model</h2>
+
+            <p>
+                HTML-elementer kan tenkes som bokser.
+                CSS box model består av innhold,
+                padding, border og margin.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>.card {
+    margin: 20px;
+
+    padding: 24px;
+
+    border: 1px solid #ddd;
+}</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Margin</h2>
+
+            <p>
+                <code>margin</code> lager plass
+                utenfor elementet.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>.card {
+    margin: 20px;
+}</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Padding</h2>
+
+            <p>
+                <code>padding</code> lager plass mellom
+                innholdet og kanten på elementet.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>.card {
+    padding: 24px;
+}</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Border og border-radius</h2>
+
+            <div class="code-box">
+
+<pre><code>.card {
+    border: 1px solid #ddd;
+
+    border-radius: 12px;
+}</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             FLEXBOX
+        ========================== -->
+
+        <section id="flexbox">
+
+            <h2>Flexbox</h2>
+
+            <p>
+                Flexbox brukes til å plassere elementer
+                i en fleksibel rad eller kolonne.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>.container {
+    display: flex;
+}</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Gap</h2>
+
+            <p>
+                <code>gap</code> lager mellomrom
+                mellom elementene.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>.container {
+    display: flex;
+
+    gap: 20px;
+}</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>justify-content</h2>
+
+            <p>
+                <code>justify-content</code> bestemmer
+                plasseringen langs hovedaksen.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>.container {
+    display: flex;
+
+    justify-content: space-between;
+}</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>align-items</h2>
+
+            <p>
+                <code>align-items</code> bestemmer
+                plasseringen langs den andre aksen.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>.container {
+    display: flex;
+
+    align-items: center;
+}</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             GRID
+        ========================== -->
+
+        <section id="grid">
+
+            <h2>CSS Grid</h2>
+
+            <p>
+                Grid passer godt når innhold skal organiseres
+                i rader og kolonner.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>.container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Tre like kolonner</h2>
+
+            <p>
+                <code>repeat(3, 1fr)</code> lager
+                tre kolonner med lik bredde.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>grid-template-columns:
+    repeat(3, 1fr);</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Én kolonne</h2>
+
+            <p>
+                På mindre skjermer kan Grid for eksempel
+                endres til én kolonne.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>grid-template-columns: 1fr;</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             RESPONSIVE DESIGN
+        ========================== -->
+
+        <section id="responsive">
+
+            <h2>Responsive design</h2>
+
+            <p>
+                Responsive design betyr at nettsiden tilpasser
+                seg forskjellige skjermstørrelser.
+            </p>
+
+            <p>
+                Media queries kan brukes til å endre CSS
+                når skjermen blir mindre.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>@media (max-width: 800px) {
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+}</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Max-width</h2>
+
+            <p>
+                <code>max-width</code> kan hindre innholdet
+                i å bli for bredt på store skjermer.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>main {
+    max-width: 1200px;
+
+    margin: 0 auto;
+}</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Et enkelt eksempel</h2>
+
+            <p>
+                Her kombineres flere av teknikkene
+                fra denne siden.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>.card {
+    padding: 24px;
+
+    background-color: white;
+
+    border: 1px solid #ddd;
+    border-radius: 12px;
+}
+
+.card-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+@media (max-width: 800px) {
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+}</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <div id="site-footer"></div>
+
+
+    <script src="../../js/main.js"></script>
+
+</body>
+
+</html>

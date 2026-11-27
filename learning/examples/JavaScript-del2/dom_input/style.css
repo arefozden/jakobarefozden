@@ -1,0 +1,66 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+}
+
+h1 {
+    color: #1e3a8a;
+}
+
+.skjema {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+}
+
+button {
+    padding: 12px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+li {
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #f1f5f9;
+    cursor: pointer;
+}
+
+.ferdig {
+    text-decoration: line-through;
+    color: gray;
+    background-color: #dcfce7;
+}
+
+#status {
+    color: #b91c1c;
+}
+
+@media (max-width: 480px) {
+    .skjema {
+        flex-direction: column;
+    }
+}

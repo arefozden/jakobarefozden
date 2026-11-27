@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML-ressurser | IM Portal</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+    <div id="site-header"></div>
+
+    <main id="top">
+
+        <!-- BREADCRUMB -->
+
+        <div class="breadcrumb">
+            <a href="../../index.html">IM Portal</a>
+            <span>›</span>
+
+            <a href="../index.html">Ressurser</a>
+            <span>›</span>
+
+            <span>HTML</span>
+        </div>
+
+
+        <!-- INTRO -->
+
+        <section class="page-intro">
+
+            <p class="eyebrow">
+                Kodebibliotek
+            </p>
+
+            <h1>HTML</h1>
+
+            <p>
+                Hurtigoversikt over vanlige HTML-elementer
+                og hvordan de brukes.
+            </p>
+
+        </section>
+
+
+        <!-- INNHOLDSMENY -->
+
+        <nav class="page-toc" aria-label="Innhold på siden">
+
+            <strong>På denne siden</strong>
+
+            <div class="page-toc-links">
+
+                <a href="#grunnstruktur">
+                    Grunnstruktur
+                </a>
+
+                <a href="#tekst">
+                    Tekst og overskrifter
+                </a>
+
+                <a href="#lenker">
+                    Lenker
+                </a>
+
+                <a href="#bilder">
+                    Bilder
+                </a>
+
+                <a href="#lister">
+                    Lister
+                </a>
+
+                <a href="#semantisk">
+                    Semantisk HTML
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- =========================
+             GRUNNSTRUKTUR
+        ========================== -->
+
+        <section id="grunnstruktur">
+
+            <h2>Grunnstruktur</h2>
+
+            <p>
+                En HTML-side starter vanligvis med en grunnstruktur
+                som forteller nettleseren hvordan dokumentet er bygget opp.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="no"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Min nettside&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1&gt;Hei verden!&lt;/h1&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             TEKST OG OVERSKRIFTER
+        ========================== -->
+
+        <section id="tekst">
+
+            <h2>Overskrifter</h2>
+
+            <p>
+                HTML har seks nivåer med overskrifter,
+                fra <code>&lt;h1&gt;</code> til <code>&lt;h6&gt;</code>.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>&lt;h1&gt;Hovedoverskrift&lt;/h1&gt;
+
+&lt;h2&gt;Undertittel&lt;/h2&gt;
+
+&lt;h3&gt;Underpunkt&lt;/h3&gt;</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Avsnitt</h2>
+
+            <p>
+                Avsnitt skrives med <code>&lt;p&gt;</code>.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>&lt;p&gt;
+    Dette er et avsnitt.
+&lt;/p&gt;</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Fremhevet tekst</h2>
+
+            <p>
+                Du kan bruke <code>&lt;strong&gt;</code> og
+                <code>&lt;em&gt;</code> for å markere viktig tekst.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>&lt;strong&gt;Viktig tekst&lt;/strong&gt;
+
+&lt;em&gt;Fremhevet tekst&lt;/em&gt;</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             LENKER
+        ========================== -->
+
+        <section id="lenker">
+
+            <h2>Lenker</h2>
+
+            <p>
+                Lenker lages med <code>&lt;a&gt;</code>.
+                Adressen legges i <code>href</code>.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>&lt;a href="https://example.com"&gt;
+    Besøk nettsiden
+&lt;/a&gt;</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Lenke til en annen side</h2>
+
+            <div class="code-box">
+
+<pre><code>&lt;a href="om.html"&gt;
+    Om oss
+&lt;/a&gt;</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Åpne lenke i ny fane</h2>
+
+            <div class="code-box">
+
+<pre><code>&lt;a
+    href="https://example.com"
+    target="_blank"
+    rel="noopener"&gt;
+
+    Åpne nettsiden
+
+&lt;/a&gt;</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             BILDER
+        ========================== -->
+
+        <section id="bilder">
+
+            <h2>Bilder</h2>
+
+            <p>
+                Bilder legges inn med <code>&lt;img&gt;</code>.
+                Husk alltid en beskrivende <code>alt</code>-tekst.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>&lt;img
+    src="bilder/bilde.jpg"
+    alt="Beskrivelse av bildet"
+&gt;</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Bilde i egen mappe</h2>
+
+            <p>
+                Det er vanlig å samle bilder i en egen mappe,
+                for eksempel <code>images</code> eller <code>bilder</code>.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>prosjekt/
+│
+├── index.html
+│
+└── bilder/
+    └── logo.png</code></pre>
+
+            </div>
+
+
+            <div class="code-box">
+
+<pre><code>&lt;img
+    src="bilder/logo.png"
+    alt="Logo"
+&gt;</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             LISTER
+        ========================== -->
+
+        <section id="lister">
+
+            <h2>Uordnet liste</h2>
+
+            <p>
+                En uordnet liste bruker <code>&lt;ul&gt;</code>.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>&lt;ul&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Nummerert liste</h2>
+
+            <p>
+                En nummerert liste bruker <code>&lt;ol&gt;</code>.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>&lt;ol&gt;
+    &lt;li&gt;Planlegg&lt;/li&gt;
+    &lt;li&gt;Lag HTML&lt;/li&gt;
+    &lt;li&gt;Test nettsiden&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+            </div>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             SEMANTISK HTML
+        ========================== -->
+
+        <section id="semantisk">
+
+            <h2>Semantisk HTML</h2>
+
+            <p>
+                Semantiske elementer forteller noe om hvilken rolle
+                innholdet har på siden.
+            </p>
+
+            <div class="code-box">
+
+<pre><code>&lt;header&gt;
+    ...
+&lt;/header&gt;
+
+&lt;nav&gt;
+    ...
+&lt;/nav&gt;
+
+&lt;main&gt;
+
+    &lt;section&gt;
+
+        &lt;article&gt;
+            ...
+        &lt;/article&gt;
+
+    &lt;/section&gt;
+
+&lt;/main&gt;
+
+&lt;footer&gt;
+    ...
+&lt;/footer&gt;</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>Vanlige semantiske elementer</h2>
+
+            <ul>
+                <li><code>&lt;header&gt;</code> – toppområde eller introduksjon</li>
+                <li><code>&lt;nav&gt;</code> – navigasjon</li>
+                <li><code>&lt;main&gt;</code> – hovedinnhold</li>
+                <li><code>&lt;section&gt;</code> – innholdsseksjon</li>
+                <li><code>&lt;article&gt;</code> – selvstendig innhold</li>
+                <li><code>&lt;footer&gt;</code> – bunnområde</li>
+            </ul>
+
+            <a class="back-to-top" href="#top">
+                ↑ Til toppen
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <div id="site-footer"></div>
+
+
+    <script src="../../js/main.js"></script>
+
+</body>
+
+</html>

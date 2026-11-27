@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tastatur</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Test med tastaturet</h1>
+    <p>Trykk Tab for å flytte fokus. Trykk Enter på knappen, eller mellomrom når knappen har fokus.</p><a
+        href="#resultat">Gå til resultat</a><label for="navn">Navn:</label><input id="navn"
+        placeholder="Skriv navn"><button id="hei">Si hei</button>
+    <p id="resultat" aria-live="polite">Her kommer resultatet.</p>
+    <script>document.querySelector('#hei').addEventListener('click', function () { const navn = document.querySelector('#navn').value; document.querySelector('#resultat').textContent = 'Hei, ' + (navn || 'venn') + '!'; });</script>
+</body>
+
+</html>

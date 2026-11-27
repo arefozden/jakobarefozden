@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="no">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mobiltest og brukertest</title>
+  <link rel="stylesheet" href="kurs.css">
+</head>
+
+<body>
+  <header>
+    <h1>Uke 46 · Testing og feilsøking</h1>
+    <p>Minikurs med HTML, CSS og JavaScript</p>
+  </header>
+  <main><a class="back" href="index.html">← Tilbake til oversikten</a><span class="tag">Tema 6 av 6</span>
+    <h2>Mobiltest og brukertest</h2>
+    <p class="lead">Siden skal fungere på både PC og mobil</p>
+    <div class="panel"><strong>Oppgave:</strong> Åpne F12, velg mobilvisning, test meny, knapp og
+      kort.<br><strong>Diskuter:</strong> Hva må endres for at kortene ikke skal gå utenfor skjermen?</div>
+    <h2 style="margin-top:26px">Prøv begge versjonene</h2>
+    <div class="pair">
+      <section class="panel">
+        <h2>1 · Feil versjon</h2><a class="btn " href="06_mobil_og_brukertest/index_feil.html" target="_blank"
+          rel="noopener">Åpne i ny fane</a><iframe class="preview" src="06_mobil_og_brukertest/index_feil.html"
+          title="1 · Feil versjon" loading="lazy"></iframe>
+        <p><small>For Console og mobiltest: Åpne i ny fane og trykk F12.</small></p>
+        <details>
+          <summary>Vis index_feil.html</summary>
+          <pre
+            class="code"><code>&lt;!DOCTYPE html&gt;&lt;html lang=&quot;no&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;&lt;title&gt;Mobiltest og brukertest&lt;/title&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;Mobiltest og brukertest&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Oppgave:&lt;/strong&gt; Åpne DevTools og velg mobilvisning. Test lenkene, knappen og om kortene passer på mobil.&lt;/p&gt;&lt;nav&gt;&lt;a href=&quot;#meny&quot;&gt;Meny&lt;/a&gt;&lt;a href=&quot;#kontakt&quot;&gt;Kontakt&lt;/a&gt;&lt;/nav&gt;&lt;section class=&quot;kort-container&quot; id=&quot;meny&quot;&gt;&lt;article class=&quot;kort&quot;&gt;&lt;h2&gt;Dagens meny&lt;/h2&gt;&lt;p&gt;Sandwich og juice&lt;/p&gt;&lt;/article&gt;&lt;article class=&quot;kort&quot;&gt;&lt;h2&gt;Åpningstid&lt;/h2&gt;&lt;p&gt;08.00–15.00&lt;/p&gt;&lt;/article&gt;&lt;/section&gt;&lt;button id=&quot;vis&quot;&gt;Vis beskjed&lt;/button&gt;&lt;p id=&quot;resultat&quot;&gt;&lt;/p&gt;&lt;footer id=&quot;kontakt&quot;&gt;Kontakt: kantina@eksempel.no&lt;/footer&gt;&lt;script src=&quot;script_feil.js&quot; defer&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+        </details>
+        <details>
+          <summary>Vis script_feil.js</summary>
+          <pre class="code"><code>document.querySelector(&quot;#vis&quot;).addEventListener(&quot;click&quot;, function () {
+  document.querySelector(&quot;#resultat&quot;).textContent = &quot;Velkommen til kantina!&quot;;
+});
+</code></pre>
+        </details>
+        <details>
+          <summary>Vis style.css</summary>
+          <pre class="code"><code>* {box-sizing:border-box} body {font-family:Arial,sans-serif;max-width:900px;margin:35px auto;padding:18px;line-height:1.5} h1 {color:#17365d} a:focus-visible,button:focus-visible {outline:3px solid orange;outline-offset:3px}
+nav a {margin-right:18px} .kort-container {display:flex;gap:16px;width:850px} .kort {background:#e0ecff;padding:18px;flex:1;border-radius:10px} button {padding:12px;background:#2563eb;color:white;border:0;border-radius:8px} footer {margin-top:24px}
+
+@media(max-width:600px){.kort-container{width:100%;flex-direction:column}nav a{display:inline-block;padding:8px}}
+</code></pre>
+        </details>
+      </section>
+      <section class="panel">
+        <h2>2 · Rettet versjon</h2><a class="btn good" href="06_mobil_og_brukertest/index_riktig.html" target="_blank"
+          rel="noopener">Åpne i ny fane</a><iframe class="preview" src="06_mobil_og_brukertest/index_riktig.html"
+          title="2 · Rettet versjon" loading="lazy"></iframe>
+        <p><small>For Console og mobiltest: Åpne i ny fane og trykk F12.</small></p>
+        <details>
+          <summary>Vis index_riktig.html</summary>
+          <pre
+            class="code"><code>&lt;!DOCTYPE html&gt;&lt;html lang=&quot;no&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;&lt;title&gt;Mobiltest og brukertest&lt;/title&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;style_riktig.css&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;Mobiltest og brukertest&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Oppgave:&lt;/strong&gt; Åpne DevTools og velg mobilvisning. Test lenkene, knappen og om kortene passer på mobil.&lt;/p&gt;&lt;nav&gt;&lt;a href=&quot;#meny&quot;&gt;Meny&lt;/a&gt;&lt;a href=&quot;#kontakt&quot;&gt;Kontakt&lt;/a&gt;&lt;/nav&gt;&lt;section class=&quot;kort-container&quot; id=&quot;meny&quot;&gt;&lt;article class=&quot;kort&quot;&gt;&lt;h2&gt;Dagens meny&lt;/h2&gt;&lt;p&gt;Sandwich og juice&lt;/p&gt;&lt;/article&gt;&lt;article class=&quot;kort&quot;&gt;&lt;h2&gt;Åpningstid&lt;/h2&gt;&lt;p&gt;08.00–15.00&lt;/p&gt;&lt;/article&gt;&lt;/section&gt;&lt;button id=&quot;vis&quot;&gt;Vis beskjed&lt;/button&gt;&lt;p id=&quot;resultat&quot;&gt;&lt;/p&gt;&lt;footer id=&quot;kontakt&quot;&gt;Kontakt: kantina@eksempel.no&lt;/footer&gt;&lt;script src=&quot;script_riktig.js&quot; defer&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+        </details>
+        <details>
+          <summary>Vis script_riktig.js</summary>
+          <pre class="code"><code>document.querySelector(&quot;#vis&quot;).addEventListener(&quot;click&quot;, function () {
+  document.querySelector(&quot;#resultat&quot;).textContent = &quot;Velkommen til kantina!&quot;;
+});
+</code></pre>
+        </details>
+        <details>
+          <summary>Vis style_riktig.css</summary>
+          <pre class="code"><code>* {box-sizing:border-box} body {font-family:Arial,sans-serif;max-width:900px;margin:35px auto;padding:18px;line-height:1.5} h1 {color:#17365d} a:focus-visible,button:focus-visible {outline:3px solid orange;outline-offset:3px}
+nav a {margin-right:18px} .kort-container {display:flex;gap:16px;width:100%;max-width:850px} .kort {background:#e0ecff;padding:18px;flex:1;border-radius:10px} button {padding:12px;background:#2563eb;color:white;border:0;border-radius:8px} footer {margin-top:24px}
+
+@media(max-width:600px){.kort-container{width:100%;flex-direction:column}nav a{display:inline-block;padding:8px}}
+</code></pre>
+        </details>
+      </section>
+    </div>
+    <div class="panel" style="margin-top:20px">
+      <h2>Mini-testlogg</h2>
+      <p>Hva testet du? Hva skjedde i feilversjonen? Hva ble rettet? Test én gang til.</p>
+    </div>
+    <p><a class="btn secondary" href="index.html">Alle temaer</a></p>
+  </main>
+  <footer>VG1 · Konseptutvikling og programmering</footer>
+</body>
+
+</html>
